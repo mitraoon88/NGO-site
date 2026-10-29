@@ -1,0 +1,206 @@
+/**
+ * A2 Platform admin — operator screens.
+ *
+ * Deliberately plain. These are screens an auditor or an operations coordinator
+ * reads under time pressure, so the rules are: one visual signal per state, no
+ * colour that is not also a word, and no interactive element that is smaller
+ * than 44 px. The colour tokens match the public Khandolite system so an
+ * operator moving between wp-admin and the site does not have to relearn what
+ * "red" means — but they are hard-coded here rather than loaded from
+ * khandolite.css, because wp-admin must keep working if the theme is switched.
+ */
+.wrap.a2-admin {
+	--a2-charcoal: #262626;
+	--a2-cream: #fdfbf7;
+	--a2-stone-tint: #f3e7de;
+	--a2-terracotta: #b84a39;
+	--a2-terracotta-deep: #a94434;
+	--a2-marigold: #f2b705;
+	--a2-line: #8c7d6f;
+	--a2-muted: #666;
+
+	max-width: 1180px;
+	color: var(--a2-charcoal);
+}
+
+.wrap.a2-admin .a2-lede {
+	max-width: 68ch;
+	font-size: 15px;
+	line-height: 1.6;
+	color: #4a4a4a;
+}
+
+/* ── Metric cards ─────────────────────────────────────────────────────────── */
+
+.a2-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+	gap: 16px;
+	margin: 24px 0 32px;
+}
+
+.a2-card {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 20px 22px;
+	background: var(--a2-cream);
+	border: 1px solid var(--a2-stone-tint);
+	border-left: 4px solid var(--a2-terracotta-deep);
+	border-radius: 4px;
+}
+
+/* A card with no source rows is visually quieter. The number is "—" and it must
+   not read like a real figure at a glance. */
+.a2-card--empty {
+	border-left-color: var(--a2-line);
+	background: repeating-linear-gradient(
+		-45deg,
+		var(--a2-cream),
+		var(--a2-cream) 8px,
+		#f7f2ec 8px,
+		#f7f2ec 16px
+	);
+}
+
+.a2-card__value {
+	font-size: 34px;
+	line-height: 1.05;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	font-variant-numeric: tabular-nums;
+}
+
+.a2-card--empty .a2-card__value {
+	color: var(--a2-muted);
+}
+
+.a2-card__label {
+	font-size: 13px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.a2-card__target,
+.a2-card__meta,
+.a2-card__note {
+	font-size: 12px;
+	color: var(--a2-muted);
+}
+
+.a2-card__note {
+	margin-top: 6px;
+	padding-top: 6px;
+	border-top: 1px dashed var(--a2-line);
+}
+
+/* ── State pills: colour + word, never colour alone ───────────────────────── */
+
+.a2-pill {
+	display: inline-block;
+	padding: 2px 9px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	border: 1px solid transparent;
+}
+
+.a2-pill--off {
+	background: #f1f1f1;
+	color: #444;
+	border-color: #c3c4c7;
+}
+
+.a2-pill--on {
+	background: var(--a2-charcoal);
+	color: var(--a2-cream);
+	border-color: var(--a2-charcoal);
+}
+
+.a2-danger {
+	color: var(--a2-terracotta-deep);
+	font-weight: 600;
+	font-size: 12px;
+}
+
+/* ── Term charter panel (block editor) ────────────────────────────────────── */
+
+.a2-charter {
+	font-size: 13px;
+	line-height: 1.55;
+}
+
+.a2-charter--clean p {
+	color: #3a6b47;
+	font-weight: 600;
+}
+
+.a2-charter__head {
+	font-weight: 700;
+	margin: 0 0 8px;
+}
+
+.a2-charter__list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.a2-charter__list li {
+	margin: 0 0 10px;
+	padding: 8px 10px;
+	border-left: 3px solid;
+	border-radius: 3px;
+	background: #fafafa;
+}
+
+.a2-charter__list li.is-block {
+	border-left-color: var(--a2-terracotta);
+	background: #fdf2ef;
+}
+
+.a2-charter__list li.is-warn {
+	border-left-color: var(--a2-marigold);
+	background: #fdf9ea;
+}
+
+.a2-charter__why {
+	display: block;
+	margin-top: 3px;
+	color: #444;
+}
+
+.a2-charter__ref {
+	color: var(--a2-muted);
+	font-size: 11px;
+	font-variant-numeric: tabular-nums;
+}
+
+/* ── Focus: one visible ring, on every interactive element ────────────────── */
+
+.wrap.a2-admin a:focus-visible,
+.wrap.a2-admin button:focus-visible,
+.wrap.a2-admin input:focus-visible,
+.wrap.a2-admin summary:focus-visible {
+	outline: 2px solid var(--a2-terracotta) !important;
+	outline-offset: 2px !important;
+}
+
+/* Admin bar / menu icon on charcoal: terracotta fails at 2.94, marigold passes
+   at 8.32. This is the token rule applied to the one dark surface in wp-admin. */
+#adminmenu .toplevel_page_a2-core.menu-top:focus-visible {
+	outline-color: var(--a2-marigold) !important;
+}
+
+/* Min target size. 44 px is the WCAG 2.2 AAA figure and the blueprint's floor
+   (§12.2); wp-admin's default 28 px buttons miss it. */
+.wrap.a2-admin .button,
+.wrap.a2-admin button,
+.wrap.a2-admin input[type="text"],
+.wrap.a2-admin summary {
+	min-height: 44px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+}

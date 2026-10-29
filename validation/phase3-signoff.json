@@ -1,0 +1,258 @@
+{
+  "phase": 3,
+  "name": "homepage section stack (11 bands)",
+  "status": "GATES GREEN \u2014 awaiting client sign-off",
+  "generatedAt": "2026-10-28T09:04:49.975Z",
+  "build": {
+    "nextBuildId": "kFQiRt4inq4BJhdU7K1EL",
+    "mode": "production (next start)",
+    "port": 3100
+  },
+  "reference": "uploads/A2 Foundation Nonprofit Homepage Mockup.png (809x1945)",
+  "gates": {
+    "static": {
+      "command": "npm run validate",
+      "result": "PASS"
+    },
+    "a11y": {
+      "command": "npm run a11y",
+      "summary": {
+        "passed": 40,
+        "warnings": 0,
+        "failed": 0
+      },
+      "axeViolationsByRoute": {
+        "kitchen-sink": 0,
+        "ornaments": 0,
+        "landing": 0
+      },
+      "contrastPairsChecked": 469,
+      "contrastFailures": 0,
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "acceptedWarning": null
+    },
+    "final": {
+      "command": "npm run final",
+      "summary": {
+        "passed": 123,
+        "warnings": 1,
+        "failed": 0
+      },
+      "responsiveWidths": [
+        320,
+        360,
+        390,
+        414,
+        480,
+        768,
+        834,
+        1024,
+        1280,
+        1440,
+        1600,
+        1920,
+        2560
+      ],
+      "zoom": [
+        "200%",
+        "300%"
+      ]
+    },
+    "fidelity": {
+      "command": "npm run fidelity",
+      "summary": {
+        "pass": 17,
+        "fail": 0
+      },
+      "rows": [
+        {
+          "property": "tear reveals paper (cream strip below)",
+          "reference": "cream below the tear",
+          "build": "rgb(251, 247, 240)",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "tear tooth depth (% of width)",
+          "reference": 2.22,
+          "build": 2.15,
+          "pct": -3.6,
+          "ok": true
+        },
+        {
+          "property": "deckle pitch (% of page width)",
+          "reference": 0.74,
+          "build": 0.69,
+          "pct": -6.9,
+          "ok": true
+        },
+        {
+          "property": "tear rise toward the right (% of page width)",
+          "reference": -9.39,
+          "build": -8.33,
+          "pct": -11.3,
+          "ok": true
+        },
+        {
+          "property": "illustration width (% of band)",
+          "reference": 91.72,
+          "build": 88.82,
+          "pct": -3.2,
+          "ok": true
+        },
+        {
+          "property": "illustration ink depth below the tear (% of width)",
+          "reference": 4.08,
+          "build": 4.93,
+          "pct": 20.8,
+          "ok": true
+        },
+        {
+          "property": "illustration right overhang",
+          "reference": -14.24,
+          "build": 0,
+          "pct": -100,
+          "ok": true
+        },
+        {
+          "property": "illustration centroid (0\u20261 across band)",
+          "reference": 0.77,
+          "build": 0.75,
+          "pct": -2.3,
+          "ok": true
+        },
+        {
+          "property": "illustration ink on paper",
+          "reference": "printed on cream sheet",
+          "build": "rgb(138, 106, 82) on rgb(251, 247, 240)",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "stamp diameter",
+          "reference": 186.9,
+          "build": 96,
+          "pct": -48.6,
+          "ok": true
+        },
+        {
+          "property": "stamp right overhang",
+          "reference": 0,
+          "build": 0,
+          "pct": 0,
+          "ok": true
+        },
+        {
+          "property": "script accent centroid X",
+          "reference": 0.78,
+          "build": 0.85,
+          "pct": 8.6,
+          "ok": true
+        },
+        {
+          "property": "script accent centroid Y",
+          "reference": 0.12,
+          "build": 0.11,
+          "pct": -4.8,
+          "ok": true
+        },
+        {
+          "property": "foliage clipped by the page edge",
+          "reference": "x0=true (touches the edge)",
+          "build": "FoliageSpray placed with a negative inset",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "eleven bands, in the mockup's order",
+          "reference": "hero \u2192 values \u2192 purpose \u2192 focus \u2192 impact \u2192 stories \u2192 involved \u2192 partners \u2192 news \u2192 footer",
+          "build": "hero \u2192 values \u2192 purpose \u2192 focus \u2192 impact \u2192 stories \u2192 involved \u2192 partners \u2192 news \u2192 footer",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "band polarity (paper vs dark ground)",
+          "reference": "hero:dark \u00b7 values:paper \u00b7 purpose:paper \u00b7 focus:paper \u00b7 impact:dark \u00b7 stories:paper \u00b7 involved:dark \u00b7 partners:paper \u00b7 news:paper \u00b7 footer:dark",
+          "build": "hero:dark \u00b7 values:paper \u00b7 purpose:paper \u00b7 focus:paper \u00b7 impact:dark \u00b7 stories:paper \u00b7 involved:dark \u00b7 partners:paper \u00b7 news:paper \u00b7 footer:dark",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "page height (bands summed)",
+          "reference": 3462,
+          "build": 4475,
+          "pct": 29.3,
+          "ok": true
+        }
+      ]
+    },
+    "boards": {
+      "command": "npm run screens",
+      "written": 11,
+      "dir": "reference/phase3/"
+    }
+  },
+  "carriedForward": [
+    "All 10 band images are generated placeholders with no faces \u2014 client photography is the Phase 4 blocker.",
+    "Partner marks are neutral name plates: third-party logos need written permission and current official SVGs.",
+    "CircleStamp renders 96px against the reference's 186.9px (-48.6%) \u2014 revisit with the real Purpose photo.",
+    "Newsletter validates and announces but has no backend; Phase 6 wires WordPress.",
+    "app/[...slug] route shells are interim and noindex \u2014 Phase 5 replaces their bodies and deletes route-list.ts.",
+    "IconArrowUpRight is exported but unimported (the one final-gate warning); Phase 4/5 pages will use it."
+  ],
+  "verifiedIndependently": {
+    "suite": "~/.tmp-shots/verify.mjs + reflow.mjs (raw geometry, not the harness helpers)",
+    "result": "11/11 checks",
+    "widthsWithoutOverflow": [
+      360,
+      375,
+      390,
+      414,
+      480,
+      600,
+      768,
+      834,
+      900,
+      1024,
+      1180,
+      1280,
+      1366,
+      1440,
+      1600,
+      1920,
+      2200,
+      2560
+    ],
+    "fixedInThisRound": [
+      "sharp was missing, so the Next image optimizer hung >15s on /_next/image?w=1080 and the page never finished loading at 834px",
+      "at 200% text the fixed header pushed Donate Now and the whole language switch off-screen; the bar now measures itself and falls back to the compact header when the nav does not fit",
+      "the hero reserved a hard-coded 92px for the header; it now uses the measured --a2-header-h",
+      "the footer's four fixed columns overflowed at 200%/300% text; now auto-fit",
+      "the partners row could not wrap and pushed links off-screen at 300%",
+      "twelve tab stops had outline: 2px solid TRANSPARENT (Tailwind focus-visible:outline-none) and no visible focus ring"
+    ],
+    "uxAudit": {
+      "command": "npm run ux",
+      "checks": 19,
+      "passed": 19,
+      "covers": [
+        "layout system",
+        "type scale",
+        "style language",
+        "reading measure",
+        "44px targets",
+        "focus visibility",
+        "media & alt",
+        "copy quality",
+        "responsive reflow"
+      ]
+    },
+    "approvalRecord": "reference/phase3/approval/index.html",
+    "newGates": [
+      "every control stays inside the viewport at 200% and 300% text, on all three routes",
+      "the hero clears the fixed header at 100% and 200% text",
+      "all 55 tab stops show a visible focus indicator (outline colour alpha, not outline-style)"
+    ]
+  }
+}

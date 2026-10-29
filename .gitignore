@@ -1,0 +1,51 @@
+# ── Node ──────────────────────────────────────────────────────────────────────
+node_modules/
+.pnp
+.pnp.js
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# ── Next.js ───────────────────────────────────────────────────────────────────
+.next/
+out/
+build/
+dist/
+.vercel
+*.tsbuildinfo
+next-env.d.ts
+
+# ── Environment ───────────────────────────────────────────────────────────────
+# NEVER commit real values. A2_REVALIDATE_SECRET and the Razorpay credentials
+# live in wp-config.php and .env.local only. See docs/13-integration.md step 3.
+.env
+.env.local
+.env.*.local
+.env.production
+!.env.example
+
+# ── Secrets and keys ──────────────────────────────────────────────────────────
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+*.pfx
+
+# ── OS / editor ───────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# ── Artifacts ─────────────────────────────────────────────────────────────────
+coverage/
+.turbo/
+*.log
+/tmp/
+
+# Gate reports ARE committed on purpose: they are the evidence behind every
+# "signed off" claim. Do not ignore validation/*.json.

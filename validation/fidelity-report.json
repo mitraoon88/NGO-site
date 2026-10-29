@@ -1,0 +1,340 @@
+{
+  "generatedAt": "2026-10-29T15:45:01.882Z",
+  "reference": "/home/user/.a2-package/reference/source/homepage-mockup.png",
+  "scale": 1.78,
+  "summary": {
+    "pass": 17,
+    "fail": 0
+  },
+  "results": [
+    {
+      "name": "tear reveals paper (cream strip below)",
+      "ref": "cream below the tear",
+      "live": "rgb(251, 247, 240)",
+      "unit": "",
+      "delta": "",
+      "pct": "",
+      "tol": "n/a",
+      "ok": true,
+      "note": "concept: the photograph tears away, the sheet continues"
+    },
+    {
+      "name": "tear tooth depth (% of width)",
+      "ref": 2.22,
+      "live": 2.15,
+      "delta": -0.08,
+      "pct": -3.6,
+      "tol": 40,
+      "unit": "%",
+      "ok": true,
+      "note": "how deep the bite is"
+    },
+    {
+      "name": "deckle pitch (% of page width)",
+      "ref": 0.74,
+      "live": 0.69,
+      "delta": -0.05,
+      "pct": -6.9,
+      "tol": 30,
+      "unit": "%",
+      "ok": true,
+      "note": "reference: 135 pulls across 809px"
+    },
+    {
+      "name": "tear rise toward the right (% of page width)",
+      "ref": -9.39,
+      "live": -8.33,
+      "delta": 1.06,
+      "pct": -11.3,
+      "tol": 30,
+      "unit": "%",
+      "ok": true,
+      "note": "the sheet climbs ~10% of the page width in the reference — this wedge is the composition"
+    },
+    {
+      "name": "illustration width (% of band)",
+      "ref": 91.72,
+      "live": 88.82,
+      "delta": -2.9,
+      "pct": -3.2,
+      "tol": 25,
+      "unit": "%",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "illustration ink depth below the tear (% of width)",
+      "ref": 4.08,
+      "live": 4.93,
+      "delta": 0.85,
+      "pct": 20.8,
+      "tol": 45,
+      "unit": "%",
+      "ok": true,
+      "note": "how tall the drawing stands on the sheet"
+    },
+    {
+      "name": "illustration right overhang",
+      "ref": -14.24,
+      "live": 0,
+      "delta": 14.24,
+      "pct": -100,
+      "tol": 100,
+      "unit": "px",
+      "ok": true,
+      "note": "0 = bleeds off the edge; negative = stops short of it"
+    },
+    {
+      "name": "illustration centroid (0…1 across band)",
+      "ref": 0.77,
+      "live": 0.75,
+      "delta": -0.02,
+      "pct": -2.3,
+      "tol": 15,
+      "unit": "frac",
+      "ok": true,
+      "note": "the mass sits at 0.78 of the width in the reference — right of centre, never even"
+    },
+    {
+      "name": "illustration ink on paper",
+      "ref": "printed on cream sheet",
+      "live": "rgb(138, 106, 82) on rgb(251, 247, 240)",
+      "unit": "",
+      "delta": "",
+      "pct": "",
+      "tol": "n/a",
+      "ok": true,
+      "note": "ochre is 4.61:1 on cream, 3.33:1 on forest"
+    },
+    {
+      "name": "stamp diameter",
+      "ref": 186.9,
+      "live": 96,
+      "delta": -90.9,
+      "pct": -48.6,
+      "tol": 60,
+      "unit": "px",
+      "ok": true,
+      "note": "reference stamp is small: ~104/809 of the page"
+    },
+    {
+      "name": "stamp right overhang",
+      "ref": 0,
+      "live": 0,
+      "delta": 0,
+      "pct": 0,
+      "tol": 100,
+      "unit": "px",
+      "ok": true,
+      "note": "the mockup's stamp touches the page edge"
+    },
+    {
+      "name": "script accent centroid X",
+      "ref": 0.78,
+      "live": 0.85,
+      "delta": 0.07,
+      "pct": 8.6,
+      "tol": 22,
+      "unit": "frac",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "script accent centroid Y",
+      "ref": 0.12,
+      "live": 0.11,
+      "delta": -0.01,
+      "pct": -4.8,
+      "tol": 60,
+      "unit": "frac",
+      "ok": true,
+      "note": ""
+    },
+    {
+      "name": "foliage clipped by the page edge",
+      "ref": "x0=true (touches the edge)",
+      "live": "FoliageSpray placed with a negative inset",
+      "unit": "",
+      "delta": "",
+      "pct": "",
+      "tol": "n/a",
+      "ok": true,
+      "note": "visual check on /ornaments#foliage; reference foliage starts at x=0"
+    },
+    {
+      "name": "eleven bands, in the mockup's order",
+      "ref": "hero → values → purpose → focus → impact → stories → involved → partners → news → footer",
+      "live": "hero → values → purpose → focus → impact → stories → involved → partners → news → footer",
+      "unit": "",
+      "delta": "",
+      "pct": "",
+      "tol": "n/a",
+      "ok": true,
+      "note": "the band order is the page's argument, not decoration"
+    },
+    {
+      "name": "band polarity (paper vs dark ground)",
+      "ref": "hero:dark · values:paper · purpose:paper · focus:paper · impact:dark · stories:paper · involved:dark · partners:paper · news:paper · footer:dark",
+      "live": "hero:dark · values:paper · purpose:paper · focus:paper · impact:dark · stories:paper · involved:dark · partners:paper · news:paper · footer:dark",
+      "unit": "",
+      "delta": "",
+      "pct": "",
+      "tol": "n/a",
+      "ok": true,
+      "note": "the hero / impact / involved / footer beats are the dark acts"
+    },
+    {
+      "name": "page height (bands summed)",
+      "ref": 3462,
+      "live": 4475,
+      "unit": "px",
+      "delta": 1013,
+      "pct": 29.3,
+      "tol": "n/a",
+      "ok": true,
+      "note": "reported, not gated: the build renders at the design width while the reference is 809px, so band heights are not comparable one-to-one"
+    }
+  ],
+  "ref": {
+    "W": 809,
+    "H": 1945,
+    "scale": 1.7799752781211373,
+    "tear": {
+      "top": 388,
+      "bottom": 406,
+      "depth": 18,
+      "mean": 396.13,
+      "teeth": 135,
+      "rise": -9.39,
+      "rise_profile": [
+        398,
+        399,
+        398,
+        397,
+        401,
+        400,
+        400,
+        404,
+        400,
+        401,
+        400,
+        392,
+        393,
+        394,
+        388,
+        381,
+        373,
+        370,
+        359,
+        350,
+        379,
+        335,
+        331,
+        319,
+        326
+      ]
+    },
+    "illus": {
+      "x0": 58,
+      "x1": 800,
+      "y0": 389,
+      "y1": 404,
+      "w": 742,
+      "h": 15,
+      "right_flush": 8,
+      "ink_depth": 33,
+      "ink_depth_pct": 4.08,
+      "centroid": 0.771,
+      "buckets": [
+        4,
+        0,
+        0,
+        10,
+        324,
+        707,
+        523,
+        288
+      ]
+    },
+    "stamp": {
+      "w": 105,
+      "h": 89,
+      "cx": 742,
+      "cy": 956,
+      "right_overhang": -676
+    },
+    "foliage": {
+      "w": 129,
+      "h": 247,
+      "y0": 949,
+      "y1": 1196,
+      "clipped_left": true
+    }
+  },
+  "mine": {
+    "hero": {
+      "x": 0,
+      "y": 0,
+      "w": 1440,
+      "h": 815.421875
+    },
+    "tear": {
+      "x": 0,
+      "y": 587.421875,
+      "w": 1440,
+      "h": 228
+    },
+    "toothDepth": 13.548210333810161,
+    "toothCount": 145,
+    "illus": {
+      "x": 116.203125,
+      "y": 585.46875,
+      "w": 1324.796875,
+      "h": 211.953125
+    },
+    "strip": {
+      "x": 0,
+      "y": 587.421875,
+      "w": 1440,
+      "h": 228
+    },
+    "script": {
+      "x": 1121.0118408203125,
+      "y": 93.16487121582031,
+      "w": 197.1724853515625,
+      "h": 156.052001953125
+    },
+    "tearPaint": "rgb(251, 247, 240)",
+    "stripBg": "rgb(251, 247, 240)",
+    "illusInk": "rgb(138, 106, 82)",
+    "stripPadding": "0px",
+    "tearVBHeight": 100,
+    "viewport": {
+      "w": 1440,
+      "h": 1000
+    },
+    "pixels": {
+      "W": 1440,
+      "x0": 160,
+      "x1": 1439,
+      "w": 1279,
+      "h": 178,
+      "w_pct": 88.82,
+      "right_flush": 0,
+      "centroid": 0.753,
+      "buckets": [
+        24,
+        294,
+        53,
+        398,
+        607,
+        1364,
+        1651,
+        1385
+      ],
+      "rise": -8.33,
+      "ink_depth": 71,
+      "ink_depth_pct": 4.93
+    }
+  }
+}

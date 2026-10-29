@@ -1,0 +1,180 @@
+{
+  "phase": 2,
+  "name": "ornament & art system",
+  "status": "SIGNED OFF \u2014 all gates green",
+  "generatedAt": "2026-10-27T18:11:47.574Z",
+  "build": {
+    "nextBuildId": "qjCF3ZFWMWvVnPxJMTArH",
+    "mode": "production (next start)",
+    "port": 3100
+  },
+  "reference": "uploads/A2 Foundation Nonprofit Homepage Mockup.png (809x1945)",
+  "gates": {
+    "static": {
+      "command": "npm run validate",
+      "result": "PASS"
+    },
+    "a11y": {
+      "command": "npm run a11y",
+      "summary": {
+        "passed": 38,
+        "warnings": 1,
+        "failed": 0
+      },
+      "axeViolationsByRoute": {
+        "kitchen-sink": 0,
+        "ornaments": 0,
+        "landing": 0
+      },
+      "contrastPairsChecked": 353,
+      "contrastFailures": 0,
+      "consoleErrors": 0,
+      "failedRequests": 0,
+      "acceptedWarning": "kitchen-sink \u2014 1 control(s) under 44px height"
+    },
+    "final": {
+      "command": "npm run final",
+      "summary": {
+        "passed": 116,
+        "warnings": 0,
+        "failed": 0
+      },
+      "responsiveWidths": [
+        320,
+        360,
+        390,
+        414,
+        480,
+        768,
+        834,
+        1024,
+        1280,
+        1440,
+        1600,
+        1920,
+        2560
+      ],
+      "zoom": [
+        "200%",
+        "300%"
+      ]
+    },
+    "fidelity": {
+      "command": "npm run fidelity",
+      "summary": {
+        "pass": 14,
+        "fail": 0
+      },
+      "rows": [
+        {
+          "property": "tear reveals paper (cream strip below)",
+          "reference": "cream below the tear",
+          "build": "rgb(251, 247, 240)",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "tear tooth depth (% of width)",
+          "reference": 2.22,
+          "build": 2.03,
+          "pct": -8.8,
+          "ok": true
+        },
+        {
+          "property": "deckle pitch (% of page width)",
+          "reference": 0.74,
+          "build": 0.69,
+          "pct": -6.9,
+          "ok": true
+        },
+        {
+          "property": "tear rise toward the right (% of page width)",
+          "reference": -9.39,
+          "build": -7.99,
+          "pct": -14.9,
+          "ok": true
+        },
+        {
+          "property": "illustration width (% of band)",
+          "reference": 91.72,
+          "build": 88.82,
+          "pct": -3.2,
+          "ok": true
+        },
+        {
+          "property": "illustration ink depth below the tear (% of width)",
+          "reference": 4.08,
+          "build": 5.62,
+          "pct": 37.7,
+          "ok": true
+        },
+        {
+          "property": "illustration right overhang",
+          "reference": -14.24,
+          "build": 0,
+          "pct": -100,
+          "ok": true
+        },
+        {
+          "property": "illustration centroid (0\u20261 across band)",
+          "reference": 0.77,
+          "build": 0.73,
+          "pct": -5.2,
+          "ok": true
+        },
+        {
+          "property": "illustration ink on paper",
+          "reference": "printed on cream sheet",
+          "build": "rgb(138, 106, 82) on rgb(251, 247, 240)",
+          "pct": "",
+          "ok": true
+        },
+        {
+          "property": "stamp diameter",
+          "reference": 186.9,
+          "build": 96,
+          "pct": -48.6,
+          "ok": true
+        },
+        {
+          "property": "stamp right overhang",
+          "reference": 0,
+          "build": 0,
+          "pct": 0,
+          "ok": true
+        },
+        {
+          "property": "script accent centroid X",
+          "reference": 0.78,
+          "build": 0.85,
+          "pct": 9.3,
+          "ok": true
+        },
+        {
+          "property": "script accent centroid Y",
+          "reference": 0.12,
+          "build": 0.1,
+          "pct": -14.7,
+          "ok": true
+        },
+        {
+          "property": "foliage clipped by the page edge",
+          "reference": "x0=true (touches the edge)",
+          "build": "FoliageSpray placed with a negative inset",
+          "pct": "",
+          "ok": true
+        }
+      ]
+    },
+    "boards": {
+      "command": "npm run screens",
+      "written": 10,
+      "dir": "reference/phase2/"
+    }
+  },
+  "carriedForward": [
+    "Photography is a flat forest field until Phase 4; ink-on-photo rows are conceptual, not pixel-matched.",
+    "CircleStamp renders 96px against the reference's 186.9px (-48.6%) \u2014 inside tolerance, revisit when the Purpose photo exists.",
+    "/ornaments and /kitchen-sink are noindex review sheets, not site pages."
+  ]
+}

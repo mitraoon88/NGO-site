@@ -1,0 +1,18 @@
+{
+  "name": "a2-foundation-validation",
+  "private": true,
+  "type": "module",
+  "description": "Phase 1 validation harness \u2014 axe, computed contrast, keyboard, reflow, motion, fonts, metadata, performance.",
+  "scripts": {
+    "a11y": "node a11y-audit.mjs",
+    "final": "node final-gate.mjs",
+    "screens": "node screens.mjs",
+    "og": "node make-og.mjs",
+    "fidelity": "node fidelity.mjs",
+    "ux": "node ux-audit.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.0",
+    "playwright": "1.48.0"
+  }
+}

@@ -1,0 +1,1441 @@
+
+
+===== PAGE 1 =====
+A2 FOUNDATION — FINAL
+PLATFORM BLUEPRINT
+Hyper-Customized WordPress Platform for
+Mandir Saaf Abhiyan
+Consolidated Master Project Document (Pre-Developer
+Reference)
+Document
+title
+A2 Foundation Final Platform Blueprint — "The
+Seva-First Institutional Platform"
+Document
+code
+A2-WP-FINAL-v4.0
+Status APPROVED MASTER — supersedes all prior
+drafts
+Prepared for A2 Foundation, Bhubaneswar, Odisha (unregistered
+voluntary initiative; registration in process)
+Flagship
+initiative
+Mandir Saaf Abhiyan — temple heritage care,
+devotional remnant restoration, Sevika self-
+dependency, intergenerational education
+Languages English (default) + Odia (ଓଡ଼ିଆ); Hindi structurally
+reserved, out of launch scope
+Audience Chief developer / development agency, foundation
+leadership, program coordinators, future CSR
+partners
+
+===== PAGE 2 =====
+0. Document Control & Reconciliation
+0.1 Superseded sources (all merged into this document)
+Source Key contribution
+retained
+Superseded
+by
+Blueprint v1.0 (generalist
+NGO platform)
+Work-management
+engine, role model,
+CPT architecture,
+workﬂows,
+compliance baseline,
+maintenance model
+This document
+Blueprint v2.0 (Ekamra-
+native)
+Khandolite design
+system, cinematic
+identity, CSR portal
+concept,
+transparency ledger,
+hosting/performance
+specs
+This document
+Blueprint v3.0 (Seva-ﬁrst) 7 Sacred Pillars (non-
+commercial), /
+missions, /
+dashboard, 5-zone
+model, three-layer
+narrative, public copy
+charter
+This document
+Odia deck v1 Early Odia pillar
+drafts
+Odia deck v2
+Odia deck v2 (a2-odia-
+copy-deck-v2.md)
+Current
+authoritative Odia
+copy — pillars,
+missions, dashboard,
+glossary
+Remains a live
+companion
+
+===== PAGE 3 =====
+a2-sitemap-
+config.json v3.0
+Machine-readable
+conﬁg — 20 pages,
+26 CPTs, 6
+taxonomies, 4
+metrics, 5 zones,
+compliance switches
+Remains a live
+companion
+(conﬁg of
+record)
+generate_sitemap.py Re-runnable conﬁg
+generator
+Remains a live
+companion
+0.2 Reconciliation decisions (where drafts conﬂicted, this
+is the ﬁnal ruling)
+1. Zones: 5-zone model is ﬁnal (South Old Town · Central Unit ·
+East Rasulgarh · West Nayapalli · North Patia). The 4-zone model
+from v2 is retired; North/Patia carries phase = planned.
+2. Headline metrics: v3's four counters are ﬁnal — 150+ Metric
+Tons · 1,200+ Compliance Hours · 100% Direct Banking
+Onboarding · 60+ Children Sustained. All launch as Target —
+Year 1.
+3. Pillars: the v3 7 Sacred Pillars (devotional register) are ﬁnal; v2's
+commercial/ESG pillar wording is retired from public pages and
+survives only as internal auditor framing inside the gated data
+room.
+4. Commerce: no public commerce surface exists. Public /
+products is deleted; craft administration lives only at login-gated,
+noindex /portal/sacred-crafts/; CPT a2_product is non-
+public.
+5. Impact page: /impact/ is permanently 301-redirected to /
+dashboard/.
+6. Naming: "waste" is replaced on public pages by Sacred Remnant
+/ Pushpa / Nirmalya; "payroll/wages" by Sevika Livelihood
+Remittance; "donation" by Voluntary Contribution.
+7. Architecture: one WordPress installation, custom block theme
+a2-ekamra + custom plugin a2-core — no separate ERP, no
+native app in Phases 1–5 (PWA instead).
+
+===== PAGE 4 =====
+0.3 Companion ﬁle manifest (delivered with this
+document)
+File Role
+A2-FOUNDATION-FINAL-
+PLATFORM-BLUEPRINT.md
+This document — human
+master spec
+a2-sitemap-config.json Machine conﬁg of record
+(pages, CPTs, taxonomies,
+tokens, metrics, switches)
+generate_sitemap.py Generator for the JSON; edit
+and re-run on structural change
+a2-odia-copy-deck-v2.md Authoritative Odia copy deck +
+glossary
+v1/v2/v3 blueprints + Odia v1 Archived drafts — do not build
+from these
+PART A — STRATEGY, IDENTITY
+& VOICE
+1. Executive Summary
+A2 Foundation runs Mandir Saaf Abhiyan, a voluntary Seva movement
+in Ekamra Kshetra (Bhubaneswar) that (a) preserves the purity of high-
+footfall temple heritage sites through daily source-segregated care, (b)
+respectfully intercepts and restores sacred devotional remnants —
+Pushpa, Nirmalya and terracotta diyas — diverting them from municipal
+waste streams, (c) places 30–50 local women (Sevikas) at the centre of
+the work as a digniﬁed, in-house, self-dependency model with direct-to-
+
+===== PAGE 5 =====
+bank livelihood remittances, and (d) funds independent evening
+community learning centres giving remedial and digital education to the
+Sevikas' children.
+The digital platform is one WordPress installation delivering three
+concentric experiences on a single database:
+1. Public Sacred Narrative (Layer 1): a cinematic, editorial,
+bilingual website — devotion-ﬁrst, zero commercial vocabulary —
+that recruits volunteers and Sevikas, earns citizen trust, and
+presents institutional-grade social proof to CSR discoverers.
+2. Authenticated Operations (Layer 2): a mobile-ﬁrst work-
+management portal running daily Seva collection loops, GPS
+attendance, ﬁeld reporting, batch restoration tracking, remittance
+registers and learning-centre administration.
+3. Gated Auditor Data Room (Layer 3): lead-captured CSR
+resources, full auditable ledgers, KPI schedules and prospectus
+documents — the complete, unredacted institutional truth for
+funders.
+Design rule of the entire platform: In public, speak only of devotion,
+dignity and learning. Behind the login, measure everything. In the data
+room, hide nothing.
+2. Strategic Concept
+2.1 The dual narrative
+Two registers coexist and transition physically through the user journey
+— the same ﬂower moves from the sacred register to the institutional
+register:
+Register Vocabulary Audience
+moment
+Design
+expression
+
+===== PAGE 6 =====
+Sacred /
+Seva
+Seva, Nirmalya,
+Pushpa, Sevikas,
+Ekamra, sanctity,
+devotion
+Emotional
+hook,
+storytelling,
+recruitment
+Cinematic video,
+terracotta/gold,
+serif
+inscriptions,
+cream canvas
+Institutional
+/ ESG
+Remnant diversion,
+source
+segregation,
+livelihood
+remittance, KPI,
+SDG, audit, direct
+banking
+CSR
+managers,
+auditors,
+partners
+Data tables,
+ledgers, charts,
+charcoal-on-
+cream
+prospectus
+pages
+Narrative spine of the site: Hero (devotion) → 7 Sacred Pillars (moral
+model) → Missions (human transformation) → Dashboard (proof)
+→ Transparency Ledger (daily evidence) → CSR Portal
+(partnership).
+2.2 The three-layer architecture and its integrity rule
+Layer Audience Register Location
+L1 Public
+Sacred
+Citizens,
+devotees,
+prospective
+Sevikas, press,
+CSR
+discoverers
+Devotional,
+social, vision-led;
+zero commercial
+vocabulary
+Public pages,
+XML sitemap,
+search index
+L2
+Authenticated
+Operations
+Volunteers,
+Sevikas,
+coordinators,
+care-facility
+team
+Structural non-
+commercial
+labels (Organic
+Remnant
+Diversion, Sevika
+Livelihood
+Remittance)
+/portal/*,
+noindex
+
+===== PAGE 7 =====
+L3 Gated
+Auditor Data
+Room
+CSR managers,
+auditors, future
+board partners
+Full institutional
+truth — ledgers,
+remittance
+evidence,
+budgets, MoUs,
+methodology
+/csr-
+portal/,
+gated
+downloads,
+dashboard
+prospectus
+Integrity rule (non-negotiable): layering controls emphasis and
+audience, never truth.
+1. L3 always contains the complete, unredacted operational and
+ﬁnancial reality.
+2. Statutory disclosures (registration status, privacy, refund) remain
+visible in the L1 footer, EN + OD.
+3. Every published metric traces to an approved record; Target/
+Veriﬁed badges prevent aspiration being read as fact.
+4. If crafts physically generate turnover, trade-license/GST/income
+obligations apply regardless of website wording — site silence is a
+branding choice, never a tax strategy.
+5. No false denials: copy never claims an activity doesn't exist; it
+simply withholds mechanics that invite local political or tender
+interference. The temple instrument remains a non-commercial
+voluntary Seva MoU.
+2.3 Reference positioning
+Cultural benchmark: the stone language of Mukteswar (intricate human-
+scaled lattice) and Lingaraj (monumental mass) — motif and texture,
+never pastiche. Institutional benchmark: Bansidhar & Ila Panda
+Foundation, Social Alpha — elite, editorial, data-conﬁdent.
+3. Brand & Design System — "The
+Khandolite Scale"
+3.1 Color tokens (CSS variables + WordPress
+
+===== PAGE 8 =====
+theme.json)
+Token Hex Role Usage rule
+--
+terracotta
+#B84A39 Primary brand,
+CTA ﬁll, hover
+frames
+Buttons/accents;
+never large full-
+section ﬁlls
+--marigold #F2B705 Secondary
+accent, data
+glow
+Counter numerals on
+charcoal, icons, thin
+dividers; never small
+body text (contrast)
+--charcoal #262626 Typography,
+dark bands,
+footer
+Body text, data strips
+--cream #FDFBF7 Base canvas Replaces cold white
+sitewide
+--stone-
+tint
+#F3E7DE Derived surface Card ﬁlls, table zebra
+rows
+--line-
+sand
+#E3D5C8 Derived hairline Borders, download-
+card frames
+Accessibility: charcoal-on-cream ≈ 15:1 (AAA); terracotta-on-cream ≈
+4.8:1 (AA large/UI; white text on terracotta buttons ≈ 5.1:1). WCAG 2.1
+AA is contractual.
+3.2 Typography
+•  Latin headings (H1/H2): Playfair Display (preferred) or Lora —
+regular weight, letter-spacing 0.04em, stone-inscription feel; no
+engraved eﬀects.
+•  Latin body & data: Plus Jakarta Sans (preferred) or Inter —
+geometric, tabular numerals for tables.
+•  Odia headings: Noto Serif Oriya · Odia body: Noto Sans Oriya.
+Latin fonts contain no Odia glyphs — the theme switches font
+stacks by lang="or".
+•  Fluid clamp() scale; H1 48→72px desktop; body 17–18px;
+
+===== PAGE 9 =====
+tables 14–15px. Odia digits (୦–୯) in Odia prose; Latin digits inside
+all audit/data tables.
+3.3 Layout
+Asymmetric 12-column grid; max content width 1280px; section
+padding 80–120px desktop / 56px mobile; generous editorial
+whitespace; cards are charcoal hairline on cream that become solid
+terracotta frames on hover/focus.
+3.4 Motion & micro-interactions
+Interaction Spec Guardrail
+Scroll reveal Fade + rise 24px, 600ms
+ease-out
+Disabled under
+prefers-reduced-
+motion
+7 Pillars
+track
+Horizontal parallax desktop;
+vertical snap-scroll mobile
+Pauses oﬀ-screen
+Impact
+counters
+Count-up on viewport entry,
+gold on charcoal
+Always paired with
+Target/Veriﬁed badge
+Hover/focus
+frame
+Charcoal box → terracotta
+frame + subtle 3D tilt + faint
+Khandolite stone-grain SVG
+:focus-visible
+mirrors hover
+Hero video Slow cross-dissolve, 3
+sequences
+Muted autoplay; poster
+fallback; reduced-
+motion → static poster
+3.5 Cinematic & photographic asset rules
+Hero ﬁlm (20–35s loop): (1) morning mist over Bindusagar Lake → (2)
+Mukteswar stone lattice macro → (3) Sevikas' hands sorting marigolds /
+hand-rolling. Self-hosted on Cloudﬂare R2 or Bunny Stream (no
+YouTube embeds pre-consent); H.264 + VP9/WebM; <4 MB, 1080p
+max, muted, playsinline; JPEG poster doubles as OG image.
+
+===== PAGE 10 =====
+B-roll library: brass bells, bamboo collection baskets, EV Seva run, 7-
+chamber care facility, shade-drying racks, hand-rolled crafts, evening
+learning centre. Monochrome grade reserved for /missions portraits.
+People rule: every identiﬁable Sevika/child signs a DPDP consent form
+stored against her record; default framing is ﬁrst-name + hands-at-work;
+no student faces publicly. Never AI-fabricate images of real temples or
+women. If the shoot is delayed, launch with licensed Odisha temple
+stock + typographic hero.
+3.6 Iconography & texture
+Custom 1.5px line icons derived from temple geometry (bada triangles,
+lotus, chakra), terracotta on cream. One reusable SVG stone-grain noise
+ﬁlter at 4–8% opacity, used only on hover/dark bands, never behind
+body text. No generic green-leaf NGO clip-art.
+4. Editorial Voice & Public Copy Charter
+4.1 Voice principles
+1. Respectful and active — present tense, institutional conﬁdence
+("we intercept", "we restore", "we remit").
+2. Sacred terms kept intact — Seva, Nirmalya, Pushpa, Sevika,
+Ekamra are never ﬂattened into generic NGO English.
+3. Two reading depths per card — a bold Vision conviction line, then
+plain operational detail.
+4. Institutional precision wherever money or metrics are claimed;
+every number attributable to a ledger record.
+5. Bilingual governance: all L1 components exist in EN + OD;
+machine translation of public Odia copy is prohibited; a named
+native Odia editorial reviewer signs oﬀ every release.
+4.2 Term charter (enforced in code, not merely by
+
+===== PAGE 11 =====
+discipline)
+Banned on all public-facing surfaces (18 terms): price, pricing, sale,
+sales, retail, kiosk, barcode, packaging, product, SKU, factory,
+production line, procurement, raw material purchase, proﬁt, revenue
+target, customer, machinery for sale — plus payment-collection
+photography/tables.
+Internal/operational term Public-safe replacement
+Waste collection /
+procurement
+Organic Remnant Diversion
+Payroll / wages / salary Sevika Livelihood Remittance
+Product / output / SKU Sacred Craft / handcrafted oﬀering
+Coaching business Community Learning Centre
+Donation Voluntary Contribution (never
+"80G")
+Production / processing Restoration / Upcycling
+Employment / job Self-Dependency
+Waste / garbage Sacred Remnant / Pushpa /
+Nirmalya
+Enforcement: an a2-core content ﬁlter scans public CPT titles/content
+on save and blocks publication naming the oﬀending word; the same
+dictionary runs as a CI content-lint on staged content; banned terms
+remain fully usable in L2/L3 post types; an editor checklist item ("no
+commercial mechanics visible") is signed oﬀ per release.
+4.3 Truth-in-copy rules
+•  Launch metrics render with "Target — Year 1" badges and auto-
+ﬂip to "Veriﬁed" when fed by approved records. No hand-typed
+counters anywhere.
+•  Company names (NALCO, IMFA, Tata Power) never appear as
+partners without written consent — public copy refers to "tier-1
+
+===== PAGE 12 =====
+Odisha-based industrial houses".
+•  "0% government reliance"-style claims require an annual board-
+attested statement linked from the metric.
+•  "Carbon-neutral / zero-emission" claims require a published
+methodology note (EV energy source, avoided-emission basis);
+otherwise use "low-carbon / EV-based".
+•  The 80/20 remittance chart links to an anonymized register export.
+PART B — INFORMATION
+ARCHITECTURE & PAGE
+SPECIFICATIONS
+5. Sitemap & Navigation (20 routed views —
+machine conﬁg of record: a2-sitemap-
+config.json)
+5.1 Public navigation
+Primary menu: Our Seva · Missions · Impact Dashboard · Transparency
+· Get Involved · CSR Portal (gold outline) · Support the Seva (terracotta
+ﬁlled). Persistent top-right ENG | ଓଡ଼ିଆ toggle; WhatsApp ﬂoat button;
+login avatar only when authenticated. Footer carries the bilingual
+statutory disclosure, policy links and certiﬁcate-verify box.
+5.2 Routed views
+LAYER 1 — PUBLIC (indexed)
+
+===== PAGE 13 =====
+/                         Home — cinematic hero, metric strip, pillar + missions preview, ledger strip
+/our-seva/                7 Sacred Pillars grid + non-commercial Seva sourcing showcase
+/missions/                Active Missions — women's self-dependency + academic remedial hubs
+/dashboard/               Measurable Impact — 4 audit metrics + 5-zone matrix + sticky prospectus
+/transparency-log/        Daily remnant diversion ledger + Sevika livelihood remittance audit
+/heritage-zones/          Five-zone Seva map, temple cards, MoU status, adopt-a-site request
+/livelihood/              Sevika dignity stories, remittance transparency, incubation timeline
+/learning-centres/        Evening remedial hubs, anonymized student outcomes
+/get-involved/            Volunteer, Sevika interest, internship, temple-committee forms
+/contribute/              Voluntary contributions, Razorpay/UPI, receipt policy
+/about/                   Ekamra origin story, vision/mission, team, registration disclosure
+/contact/                 Contact + grievance ticket lookup
+/privacy-policy/  /terms/  /refund-policy/
+LAYER 2 — AUTHENTICATED (noindex, absent from XML sitemap)
+/portal/                              Role-aware Seva dashboard
+/portal/operations/                   Remnant diversion, restoration batches, approvals
+/portal/finance/                      Remittances, expenses, 80/20 reports
+/portal/sacred-crafts/                Craft inventory & dispatch (replaces deleted public /products)
+LAYER 3 — GATED
+/csr-portal/             ESG proposition, partnership-readiness tracker, resource drawer, EOI pipeline
+Permanent redirect: /impact/ → /dashboard/ (301). XML sitemap
+excludes /portal/*, /portal/sacred-crafts/, gated query
+strings; noindex CPTs: a2_product, a2_remittance,
+a2_expense, a2_csr_lead.
+5.3 Four designed journeys
+Journey Entry Conversion
+Devotee/
+citizen
+Hero, heritage zones Volunteer signup or
+voluntary contribution
+Prospective
+Sevika
+/livelihood, /
+missions
+Interest form →
+interview → enrollment
+
+===== PAGE 14 =====
+CSR manager /csr-portal,
+dashboard sticky button
+Gated download → EOI
+→ tracked pipeline
+Auditor/
+journalist
+/transparency-log CSV export, veriﬁcation
+badges, annual report
+6. Page-by-Page Speciﬁcations
+6.1 Home /
+A. Cinematic hero. Full-bleed 3-sequence ﬁlm; permanent ENG|OD
+toggle.
+•  H1 (locked): "Preserving Sacred Sanctity. Incubating Grassroots
+Dignity."
+•  Sub-headline (locked): "Under the voluntary banner of the
+Mandir Saaf Abhiyan, we intercept tons of organic ritual oﬀerings
+across the ancient temple zones of Bhubaneswar. By deploying a
+100% independent, in-house circular processing network, we
+empower local Sevikas with sustainable livelihood security —
+keeping our heritage shrines pristine and our communities self-
+reliant."
+•  CTAs: [Explore Our Seva Ecosystem] terracotta ﬁlled · [Access
+Corporate CSR Portal] transparent, gold border.
+B. Real-time metric strip. Full-width charcoal band, gold count-up
+numerals, each with Target/Veriﬁed micro-badge: 150+ Metric Tons ·
+1,200+ Compliance Hours · 100% Direct Banking · 60+ Children
+Sustained (abbreviated labels; full labels on /dashboard).
+C–F. 3-card Sacred Pillar preview → two Missions preview cards with
+SDG chips → "next Seva drive" card (from a2_drive) → before/after
+story of the month (linked to a real veriﬁed a2_field_report) →
+transparency strip (latest 3 ledger rows + "View full ledger") → footer
+disclosure.
+
+===== PAGE 15 =====
+6.2 Our Seva /our-seva/
+A. 7 Sacred Pillars grid — 3-column interactive blocks, tilt + terracotta
+frame + stone texture; full locked copy in §7; full Odia in the Odia deck
+§1. B. Sourcing showcase (re-voiced, non-commercial). Split screen:
+macro photography of the 7-Chamber Care Facility (abstracted, no
+machinery nameplates) beside a minimalist ﬂowchart of zero-emission
+Seva collection runs across city coordinates (rendered from a2_zone
+route data). Header: "Engineered Sourcing. Total Operational
+Autonomy."
+6.3 Active Missions /missions — the grant-justiﬁcation
+engine
+Hero: high-contrast asymmetric layout; terracotta type on cream;
+cinematic monochrome Sevika close-ups.
+•  H1 (locked): "Three Sacred Callings. One Unbroken Circle of
+Devotion."
+•  Intro (locked): "The Mandir Saaf Abhiyan does not look at
+cleanliness in isolation. Our work acts as a bridge where heritage
+protection meets real-world human transformation. By restoring
+what was left behind at the altars of Bhubaneswar, we breathe
+new economic energy into local households and light a path for
+the next generation."
+Focus Area 1 — Women Self-Dependency & Household Security
+•  Header: "♀ Empowering the Matriarchs of Ekamra Kshetra"
+•  Narrative (locked): true empowerment is structural restoration of
+dignity, not a handout; underrepresented women enter a safe,
+respectful, in-house community space as dedicated Sevikas;
+capabilities in traditional arts, organic blending and material
+restoration move them from economic insecurity to central
+household decision-making; each Sevika ﬁnancially independent,
+self-reliant and recognized in the local fabric.
+•  CSR badge: SDG 5 (Gender Equality) + SDG 8 (Decent Work &
+Economic Growth); Swachh Bharat Heritage Cleanliness +
+Women Empowerment alignment; "direct, un-leaked livelihood
+
+===== PAGE 16 =====
+security".
+Focus Area 2 — Intergenerational Education & Academic Remedial
+Hubs
+•  Header: " Illuminating Tomorrow: The Sacred Gift of Literacy"
+•  Narrative (locked): independent evening learning centres inside
+artisans' own communities; free foundational literacy, active bridge
+schooling, specialized homework remedial support and basic
+digital awareness for Sevikas' children; the mother's Seva
+becomes a permanent academic launchpad.
+•  CSR badge: SDG 4 (Quality Education); corporate primary-
+education mandate mapping; framed as a metric-driven
+Academic Remedial Center designed to prevent school
+dropouts.
+Both cards show live counters (active Sevikas; active students) sourced
+from records and link to /dashboard. Full Odia in deck §2.
+6.4 Measurable Impact Dashboard /dashboard
+A. Live Corporate Audit Metrics Panel — minimalist charcoal blocks,
+count-up numerals, auditor-context tooltip and Target/Veriﬁed badge per
+metric:
+# Metric Description Auditor
+context
+Source
+1 150+ Metric
+Tons
+Organic
+remnants
+diverted
+from landﬁlls
+annually
+Massive
+municipal
+load
+reduction
+across high-
+volume
+spiritual
+zones
+a2_collection_run
+sum(mass_kg)/1000
+
+===== PAGE 17 =====
+2 1,200+
+Compliance
+Hours
+Aggregate
+in-house
+skilling &
+traditional
+craft
+development
+hours
+Vocational
+skilling
+mandates
+met with
+zero third-
+party
+leakage
+a2_enrollment
+sum(training_hours)
+3 100%
+Direct
+Banking
+Onboarding
+Remittances
+directly to
+Sevikas'
+private
+accounts
+Eliminates
+cash-
+handling
+vulnerability;
+matches
+ESG
+banking
+metrics
+a2_remittance
+bank-veriﬁed ratio
+4 60+
+Children
+Sustained
+Active
+students in
+evening
+remedial &
+literacy
+classes
+Multi-
+generational
+impact
+funded by
+project
+loops
+a2_student active
+count
+B. Five-Zone Sourcing Transparency Matrix — borderline-free, CPT-
+driven table (planned/pilot rows visually de-emphasized; Odia rendering
+per deck §3):
+Service
+zone
+Primary
+remnant
+type
+Active
+Sevika
+force
+Learning-
+centre
+roster
+Phase
+South Zone
+(Old Town
+Core)
+Terracotta
+clay & ﬂoral
+mass
+25 Active
+Sevikas
+35 students
+enrolled
+established
+Central Zone
+(Unit Area
+Hub)
+Fresh
+garland
+petals
+12 Active
+Sevikas
+15 students
+enrolled
+established
+
+===== PAGE 18 =====
+East Zone
+(Rasulgarh
+Corridor)
+Leaves &
+botanical
+remnants
+8 Active
+Sevikas
+10 students
+enrolled
+established
+West Zone
+(Nayapalli
+Cluster)
+Moderate
+mixed ﬂoral
+waste
+5 Active
+Sevikas
+Pilot phase
+active
+pilot
+North Zone
+(Patia
+Corporate
+Line)
+Localized
+ritual
+oﬀerings
+Volunteer
+sourced
+Expansion
+phase plan
+planned
+C. Sticky audit button — bottom-right ﬂoating button, persists on scroll:
+[  Download Full Auditable Project Prospectus Brief (PDF) ] (Odia
+label in deck §3). Opens lead-capture overlay (name, corporate email,
+company, CSR focus, consent) → creates a2_csr_lead with source
+attribution → serves the ﬁle from a2_resource_doc and logs the
+download.
+6.5 Live Transparency Ledger /transparency-log/
+Public, zone/date-ﬁlterable, CSV-exportable; fed exclusively by veriﬁed
+operations records (15-min transient cache). Public-safe column
+headers: Processing timeline · Originating spiritual zone · Raw
+remnant mass diverted · Veriﬁcation status. Reference rows:
+Timeline Zone Mass Status (taxonomy
+processing_status)
+25 Oct
+2026
+South (Lingaraj
+Complex)
+480 kg
+(Floral/Shell
+Mix)
+Logged & Sorted (In-
+House Hub)
+25 Oct
+2026
+Central (Ram
+Mandir Unit-9)
+210 kg
+(Fresh
+Petals)
+Pulverized & Shade-
+Dried
+
+===== PAGE 19 =====
+24 Oct
+2026
+East
+(Brahmeswara
+Route)
+340 kg
+(Terracotta
+Remnants)
+Levelled & Stored for
+Diya Base
+24 Oct
+2026
+West (ISKCON
+Nayapalli)
+190 kg
+(Mixed
+Organic
+Mass)
+Deployed to Composting
+Grid
+Only verification = approved rows publish; statuses change only
+via the operations console. Below: Sevika Livelihood Remittance
+Audit — 80% direct-to-Sevika / 20% operational corpus bar chart, each
+bar linking to an anonymized register export; corpus lines (equipment
+maintenance, learning-centre books) listed individually. Statement:
+"Financial transparency remains our foundational law… zero funds on
+government liaisons, PR agencies, or administrative bloat."
+6.6 Corporate CSR Portal /csr-portal/ (L3, gated)
+•  Header: "Institutional Scalability. Zero Administrative Bloat."
+•  Proposition: plug-and-play social-grant vehicle; in-house
+execution; no third-party agency margins; the ₹12–15 lakh seed-
+grant framing maps to direct asset creation (care-facility
+equipment, zero-emission EV Seva ﬂeet, Sevika household
+stipends) — presented in L3 vocabulary with full budgets.
+•  Partnership Readiness badge: honest 4-step tracker (Entity
+registration → 12A/80G → NGO Darpan → MCA Form CSR-1)
+with current step highlighted.
+•  One-click compliance drawer (lead-gated download cards, red
+arrow on hover): 8-Page Project Pitch Deck · Phased ₹15L
+CapEx/OpEx Allocation Matrix (XLSX) · Non-Commercial Temple
+Voluntary Seva MoU Template · Quarterly Auditable Metric
+Framework & KPI Schedule · Full Auditable Project Prospectus
+Brief.
+•  Live KPI preview widget (read-only mirror of dashboard metrics,
+proving the engine exists). EOI pipeline stages: EOI → Call →
+Site Visit → Proposal → MoU, all stored in a2_csr_lead.
+
+===== PAGE 20 =====
+6.7 Other public pages
+•  /heritage-zones/ — OpenStreetMap/Mapbox 5-zone map; temple
+site cards with last-served date and MoU status badge; "Adopt a
+Site" request form for temple committees.
+•  /livelihood/ — consent-gated Sevika stories; livelihood-remittance
+transparency card; 3-stage incubation timeline (Sortation →
+Blending/Hand-Rolling → QC mastery); SHG sub-section; Sevika
+interest form.
+•  /learning-centres/ — centre map; anonymized student outcome
+charts; remedial-model explainer; support-a-learner campaign
+(wired to a2_campaign).
+•  /get-involved/ — multi-step volunteer form, Sevika interest form,
+internship track (college CSR tie-ins), temple-committee partner
+form.
+•  /contribute/ — per-campaign cards, Razorpay + UPI QR,
+domestic-only declaration, explicit non-80G receipt wording,
+utilization commitment.
+•  /about/ — Ekamra origin story, vision/mission, team, statutory
+registration disclosure, annual report archive.
+•  /contact/ — contact form, grievance ticket ID lookup (no login
+needed), map, WhatsApp ﬂoat.
+•  Legal: Privacy (DPDP consent + deletion process), Terms
+(voluntary-initiative clause), Refund policy — all bilingual.
+7. The 7 Sacred Pillars — Locked English
+Copy
+Section intro (locked): "Our work is guided by a singular, non-
+commercial vision: to preserve the ancient spiritual heritage of
+Bhubaneswar, maintain absolute purity at our shrines, and provide
+structural dignity to the community through silent, dedicated service."
+1. Heritage Site Purity & Spiritual Sanctity — Vision: Keeping the
+Divine Grounds Pristine. High-footfall religious centres require
+continuous care to maintain their sacred atmosphere. Volunteers
+dedicate themselves to daily cleaning of temple steps, courtyards
+
+===== PAGE 21 =====
+and entry pathways, ensuring every devotee walks through a
+clean, beautiful and spiritually uplifting environment.
+2. Respectful Devotional Remnant Management — Vision:
+Honoring the Flowers of Devotion. Sacred oﬀering materials
+(Pushpa and Nirmalya) carry deep spiritual faith and must never
+be treated as common municipal garbage. Holy remnants are
+collected carefully at the source, separated from plastics, and
+handled with the highest spiritual dignity and care.
+3. Sacred Remnant Restoration & Upcycling — Vision: Preserving
+the Holy Clay. Millions of clay lamps (diyas) and organic materials
+remain after daily rituals. Instead of being crushed underfoot or
+discarded into city waste streams, the team collects and restores
+them, upcycling blessed materials into traditional sacred crafts
+that honor the temple's legacy.
+4. In-House Sevika Empowerment & Dignity — Vision: Uplifting
+Lives Through Devoted Service. The campaign is powered by
+local Sevikas — women from nearby communities who lead daily
+care and processing of sacred spaces. Placing them at the centre
+provides a respectful, community-led environment that builds
+absolute self-dependence and social dignity.
+5. Grassroots Capacity & Traditional Skill Sharing — Vision:
+Preserving Traditional Crafts. Sevikas are trained from scratch in
+traditional hand-rolling methods, organic blending and sacred craft
+preservation. The fully in-house educational module revives
+traditional arts while giving local families a purposeful foundation.
+6. The Gift of Education & Intergenerational Mobility — Vision:
+Illuminating the Future of Our Children. The collective initiative
+supports independent community evening learning centres
+oﬀering free foundational literacy, bridge education and values-
+based learning for the children of dedicated Sevikas.
+7. Ecological Harmony & Environmental Protection — Vision:
+Serving Nature, Serving the Divine. Keeping massive volumes of
+wet organic mass out of city landﬁlls protects Bhubaneswar's
+groundwater, reduces soil pollution and creates a clean, eco-
+friendly model for heritage cities across India.
+Authoritative Odia versions of every title, vision line and narrative, plus
+the missions/dashboard Odia and the brand glossary (Seva, Nirmalya,
+Pushpa, Sevika, Ekamra Kshetra, Mandir Saaf Abhiyan, remnant,
+diya, remittance, self-dependency, bridge education…): a2-odia-
+
+===== PAGE 22 =====
+copy-deck-v2.md.
+PART C — PLATFORM ENGINE:
+DATA, ROLES & WORKFLOWS
+8. Data Model (26 Custom Post Types — full
+machine spec in JSON conﬁg)
+8.1 CPT register
+CPT slug Public Purpose
+a2_project yes Programmes and campaigns
+across verticals
+a2_task no Tasks and milestones
+a2_drive yes Temple cleanliness drives and
+Seva events
+a2_field_report no Geo-tagged before/after ﬁeld
+submissions
+a2_attendance no Check-in/out and veriﬁed Seva
+hours
+a2_volunteer no Volunteer proﬁles mirroring WP
+users
+a2_beneficiary no Sevika/women-program records
+with consent ﬂags
+a2_enrollment no Skilling batches, hours,
+assessments
+
+===== PAGE 23 =====
+a2_student no Learning-centre children;
+guardian consent mandatory
+a2_assessment no Student competency/remedial
+assessments
+a2_zone yes Five service zones with geo
+bounds and phase
+a2_temple_site yes Adopted shrines, MoU status,
+care baseline, last-served date
+a2_collection_run yes Daily remnant diversion
+records — the ledger's source
+of truth
+a2_processing_batch yes Restoration status transitions
+with operator/timestamps
+a2_product no Sacred-craft inventory —
+internal only; noindex, sitemap-
+excluded
+a2_remittance no Per-Sevika bank transfers;
+aggregated publicly as 80/20
+only
+a2_asset no EVs, bamboo baskets,
+equipment, custody history
+a2_expense no Expenses with bill evidence and
+approval chain
+a2_contribution no Voluntary contribution records
+and acknowledgements
+a2_campaign yes Seva support campaigns with
+utilization updates
+a2_csr_lead no Corporate partnership pipeline
+(EOI stage until CSR-1)
+a2_grant no Grant records — dormant until
+registration + CSR-1
+
+===== PAGE 24 =====
+a2_resource_doc no Gated prospectus, KPI
+schedule, MoU template,
+budgets
+a2_certificate yes Seva/internship certiﬁcates with
+public verify ID
+a2_grievance no Grievance tickets with public
+status lookup
+a2_document no SOPs, MoUs, policies, training
+material
+8.2 Taxonomies (6)
+•  vertical (hierarchical): Heritage Care · Women Self-Dependency
+· Education · Ecological Restoration · General Seva
+•  service_zone (hierarchical): South (Old Town Core) · Central
+(Unit Area Hub) · East (Rasulgarh Corridor) · West (Nayapalli
+Cluster) · North (Patia Corporate Line)
+•  remnant_type: Terracotta Clay & Floral Mass · Fresh Garland
+Petals · Leaves & Botanical Remnants · Moderate Mixed Floral
+Waste · Localized Ritual Oﬀerings
+•  processing_status: Logged & Sorted (In-House Hub) ·
+Pulverized & Shade-Dried · Levelled & Stored for Diya Base ·
+Deployed to Composting Grid
+•  skill: Traditional Hand-Rolling · Organic Blending · Sacred Craft
+Preservation · Sortation · Teaching · First Aid · EV Logistics
+•  language: en · or
+8.3 Entity relationships
+a2_zone 1—n a2_temple_site 1—n a2_collection_run n—n sevika (WP user)
+a2_collection_run 1—n a2_processing_batch        (craft linkage exists only in L2)
+a2_remittance n—1 sevika  → aggregate → public 80/20 chart
+a2_student n—1 a2_zone ; a2_enrollment n—1 a2_beneficiary
+a2_drive 1—n a2_field_report (cleanliness evidence)
+a2_csr_lead 1—n a2_resource_doc(download log) ; a2_grant (dormant switch)
+
+===== PAGE 25 =====
+a2_certificate 1—1 user/beneficiary (public verify by certificate ID)
+8.4 Privacy in the data model
+Beneﬁciary/student PII is separated from public content; public stories
+use aliases and hands framing; ID/bank documents stored above
+webroot with access logged via WP Activity Log; every personal-data
+form carries a DPDP purpose-and-consent checkbox; data export/
+deletion requests operate on a 30-day SLA.
+9. Role & Capability Model
+Role Base WP role Scope
+Super Admin Administrator Everything incl. plugins,
+compliance switches
+Org Admin Restricted Admin All operations; no plugin/
+theme installation
+Program
+Manager
+Editor + caps All verticals, CSR pipeline,
+ledger veriﬁcation
+Operations
+Coordinator
+(Care Facility)
+Author + caps Collection runs, restoration
+batches, chamber
+assignment, QC — own
+zone(s)
+Heritage
+Coordinator
+Author + caps Drives, temple sites, MoUs,
+ﬁeld reports
+Field Lead Contributor + caps Attendance and report
+veriﬁcation only
+Volunteer /
+Sevika
+Subscriber (front-
+end only, no wp-
+admin)
+Own shifts, tasks, hours,
+remittance slips, certiﬁcates,
+learning material
+Accountant Custom ﬁnance
+role
+Remittances, expenses,
+80/20, contribution ledger
+
+===== PAGE 26 =====
+CSR Manager Custom role a2_csr_lead, resource
+drawer, download analytics,
+proposals
+Auditor/Viewer Read-only role Ledger + data room + audit
+log
+Editor Editor Stories/media only; cannot
+bypass the term charter
+Row-level scoping (coordinators see only their zone/vertical) is enforced
+in a2-core via pre_get_posts ﬁlters plus meta/term capability
+checks — role plugins alone cannot provide row-level isolation.
+10. Operating Workﬂows
+10.1 Daily Seva loop
+05:30  Coordinator schedules collection run (zone, EV route, Sevika shift) — /portal/operations
+06:00  GPS geofence check-in at temple → attendance + Seva hours
+       Remnants logged: type, weighed mass, basket/EV, photographs
+09:00  Care-facility intake → restoration batch created (chamber assignment)
+Day    Status transitions: sorted → pulverized/shade-dried → stored/composted
+EOD    Field Lead verifies → row auto-publishes to /transparency-log in public-safe vocabulary
+       Counters recompute (15-min cache); mass anomalies vs route average flagged
+Monthly Accountant creates a2_remittance entries → 80/20 chart updates
+10.2 Cleanliness drive loop (heritage vertical)
+Drive creation → public/WhatsApp enrolment → T-24h reminders (email
++ WhatsApp + SMS) → GPS check-in (200 m geofence) → oﬄine-
+capable before/after ﬁeld report (PWA draft, compressed photos) →
+veriﬁcation → public drive story + hours + certiﬁcate rule evaluation.
+
+===== PAGE 27 =====
+10.3 Sevika lifecycle
+Interest form → interview & DPDP consent → batch enrollment →
+traditional-skilling hours → QC/assessment → active status with bank
+onboarding → remittance history → 3/6-month outcome surveys →
+leadership track (ﬁeld lead/trainer).
+10.4 Education loop
+Centre registry → guardian written consent → anonymized student
+enrollment → bulk mobile attendance grid → periodic remedial
+assessments → level-up charts feed the 60+ counter and the 5-zone
+roster; kit/learning-material distribution logged with acknowledgement
+photo.
+10.5 CSR partnership loop (compliance-gated)
+Gated download/sticky prospectus → a2_csr_lead created →
+automated acknowledgement + documents → pipeline (EOI → Call →
+Site Visit → Proposal → MoU) → post-registration only: a2_grant
+activation, branded partner view, quarterly KPI auto-report against the
+downloadable KPI schedule.
+10.6 Contribution loop
+Campaign page → Razorpay/UPI (domestic declaration, international
+cards blocked) → webhook creates a2_contribution → PDF
+acknowledgement (non-80G clause) → later expenses link to campaign
+→ public utilization % updates.
+10.7 Communication automation matrix
+Trigger Channels Content
+Volunteer/Sevika
+application approved
+Email +
+WhatsApp
+Welcome kit, portal login,
+SOPs
+
+===== PAGE 28 =====
+Drive T-24h WhatsApp +
+SMS
+Location pin, timing,
+checklist
+Task overdue 2 days Email Assignee + lead reminder
+Field report submitted In-app +
+email
+Veriﬁcation request
+Expense approved/
+rejected
+Email Reimbursement status
+Contribution received Email + PDF Acknowledgement +
+campaign impact
+Certiﬁcate issued Email + portal Download + verify link
+1st of month Email to
+admins
+Auto PDF KPI report
+PART D — ENGINEERING,
+GOVERNANCE & DELIVERY
+11. Technical Architecture
+11.1 Build approach
+•  Custom block theme a2-ekamra with theme.json encoding
+every design token (preferred; alternative: Bricks Builder with
+identical global styles). A child layer handles presentation only.
+•  All business logic in the custom plugin a2-core — CPTs,
+taxonomies, roles, scoping, term-charter ﬁlter, workﬂows,
+dashboards, REST endpoints, PDF templates, PWA service
+worker. Nothing in functions.php.
+
+===== PAGE 29 =====
+•  Git version control; staging-ﬁrst updates; no nulled plugins; WP-
+CLI available.
+11.2 Plugin/technology stack
+Need Choice
+Theme Custom a2-ekamra block theme (or Bricks)
+Fields ACF Pro
+Forms &
+workﬂows
+Fluent Forms Pro (Razorpay native, multilingual,
+webhooks)
+Multilingual Polylang Pro (EN/OD, hreﬂang, font switching)
+Roles User Role Editor + a2-core scoping code
+Projects/tasks UpStream or native a2_project/a2_task
+Kanban
+Payments Razorpay (domestic only) + UPI QR/deep links
+Ledger/tables/
+charts
+wpDataTables + Graphina/Chart.js
+Maps OpenStreetMap + Mapbox (zone geofences)
+PDFs Gravity PDF/E2Pdf — receipts, certiﬁcates,
+prospectus, monthly reports
+Email/SMS/
+WhatsApp
+WP Mail SMTP + Brevo/SES · MSG91 · WATI/
+Interakt (Phase 2)
+Video/CDN/WAF Cloudﬂare R2/Bunny + Cloudﬂare CDN/WAF
+SEO Rank Math (NGO, Dataset, Event, ItemList,
+Product-free schema)
+Security/audit Solid Security/Wordfence + 2FA + WP Activity
+Log
+Oﬄine/ﬁeld PWA service worker in a2-core, photo
+compression, local drafts
+Analytics Site Kit (GA4 + Search Console)
+
+===== PAGE 30 =====
+11.3 Ledger query spec (for the developer)
+Public table = WP_Query on a2_collection_run joined to latest
+a2_processing_batch status, ﬁltered by zone/date, 15-min transient
++ Redis object cache; only verification = approved rows publish;
+CSV export re-runs the same server-side query (no DOM scraping).
+11.4 Hosting & performance
+India-region managed PHP host (Bengaluru/Mumbai), PHP 8.2+,
+MariaDB 10.6+, Redis, staging + daily oﬀsite backups (30-day retention,
+monthly restore drill; RPO 24 h, RTO 4 h). Domain .in preferred; Zoho
+Mail or Google Workspace. Performance budgets: LCP < 2.5 s on 4G
+India, hero lazy-mounted after ﬁrst paint, WebP/AVIF, critical CSS
+inlined, preloaded fonts with font-display:swap, ledger pages < 1
+MB excluding data. PWA installable on low-end Android.
+12. Metrics Governance
+•  Two states only: Target — Year 1 (all four at launch; planned/pilot
+zone rows) and Veriﬁed (computed from approved records, 15-
+min cache, tooltip naming source CPT and aggregation).
+•  "100% Direct Banking" requires per-Sevika bank-veriﬁcation ﬂags;
+attestation-based claims link to their board-attested document in
+L3.
+•  No metric may be hand-typed into page content — counters
+render only from the metric subsystem deﬁned in a2-sitemap-
+config.json → impact_counters.
+13. Compliance Architecture (Unregistered
+Stage)
+
+===== PAGE 31 =====
+13.1 Hard admin switches (site options, default OFF)
+Switch Legal trigger to
+enable
+80G tax receipts 80G grant obtained
+International payments FCRA obtained
+(otherwise gateway-
+blocked)
+CSR grant acceptance (a2_grant) Entity registration +
+NGO Darpan + MCA
+Form CSR-1
+Public commerce Entity/trade licensing
+decision; remains oﬀ
+by default
+Activation sequence: Trust/Society/Section 8
+→ 12A + 80G → NGO Darpan → CSR-1 →
+FCRA (only if foreign funding is ever
+planned).
+13.2 Permitted now vs prohibited
+•  Permitted: voluntary contributions into a dedicated bank/UPI
+account with acknowledgement receipts; in-kind support;
+volunteer/Sevika onboarding; non-commercial temple Seva MoUs;
+EOI discussions and prospectus sharing; ﬁscal-sponsorship
+routing via a registered partner NGO (sponsor-entity tag on
+records).
+•  Prohibited until registered: 80G receipts or "tax-free" language;
+foreign donations; direct CSR grants; naming companies as
+partners without consent; showing grants as received.
+•  Footer disclosure (bilingual, every page): "A2 Foundation is a
+voluntary initiative; statutory registration is in process.
+Contributions are voluntary and currently carry no section 80G tax
+beneﬁt."
+
+===== PAGE 32 =====
+13.3 Narrative-privacy boundary (the lawful version of
+"stealth")
+Permitted: devotional public vocabulary; withholding operational
+mechanics, craft distribution and internal costs from anonymous visitors;
+login-gated commercial administration; structural navigation labels. Not
+permitted (excluded by design): misrepresentation to donors/authorities,
+missing statutory disclosures, dual sets of books, or unsupported
+metrics. L3 guarantees any formal partner receives complete truth; craft
+turnover obligations (trade license/GST/income) are managed oﬄine by
+the accountant regardless of site wording.
+13.4 DPDP 2023
+Consent + purpose on every personal-data form; guardian consent
+upload for students; ID/bank documents above webroot, access-logged;
+public anonymization (ﬁrst names, hands, no student faces); export/
+deletion workﬂow with 30-day SLA; bilingual privacy policy; photo/video
+consent stored against each person's record.
+14. SEO, Schema & Analytics
+•  Schema per page: NGO (home), ItemList (pillars), Dataset
+(dashboard & transparency — eligible for Google dataset
+surfaces), Event (drives), ContactPage, AboutPage; bilingual
+hreﬂang EN/OD; localized Odia OG images.
+•  Local SEO: Google Business Proﬁle, Old Town service area, ﬁve-
+zone coverage.
+•  GA4 goals: prospectus download, EOI submit, contribution,
+volunteer/Sevika apply, certiﬁcate verify, ledger CSV export →
+monthly acquisition report.
+•  Content ﬂywheel: one-click story draft from any veriﬁed run (data +
+photos pre-ﬁlled), auto-passed through the banned-term ﬁlter
+before editorial review.
+
+===== PAGE 33 =====
+15. External Integrations
+Razorpay (webhook-signed) · UPI deep links · WhatsApp Business API
+(WATI/Interakt) · MSG91 SMS · Zoho/Google email · OpenStreetMap/
+Mapbox · Cloudﬂare R2/S3 backups · optional Google Sheets BI mirror ·
+REST API reserved for a future mobile app on the same CPT data.
+16. Roadmap (14 Weeks) & MVP Deﬁnition
+Phase Weeks Deliverables
+0 — Brand &
+Discovery
+1 Token/copy sign-oﬀ incl. term charter;
+ﬁlm/photo shoot (with monochrome
+missions grade); domain/host/staging;
+JSON v3 accepted
+1 — Design
+System &
+Public Core
+2–4 a2-ekamra theme; home + our-seva
+with 7 Sacred Pillars; about/legal;
+Polylang EN/OD; CPT/role foundation;
+banned-term ﬁlter live
+2 — Missions &
+Evidence
+5–7 /missions both focus areas + SDG
+badges; 5 zones/temple sites; Seva runs
++ PWA ﬁeld forms; transparency ledger;
+cinematic hero
+3 — People &
+Money
+8–10 Sevika lifecycle + /livelihood;
+learning centres & remedial tracking;
+Razorpay contributions + receipts;
+expenses; remittance & 80/20; certiﬁcates
+4 — Dashboard
+& CSR
+11–12 /dashboard (4 metrics, 5-zone matrix,
+sticky prospectus); CSR portal + gated
+drawer + EOI pipeline; WhatsApp/SMS;
+internal sacred-crafts console
+
+===== PAGE 34 =====
+5 — Hardening
+& Launch
+13–14 WCAG AA, performance, security audit,
+Odia editorial review, content-lint audit,
+UAT on two real Seva days, handover
+training
+MVP (week 7): full Khandolite design + 7 Sacred Pillars + Missions +
+working live ledger + operations portal — already credible for CSR
+conversations. Post-launch: LMS addition, native app feasibility, 80G/
+CSR-1 feature activation when registration completes.
+17. Budget Indicators (INR)
+Item Lean (freelancer/
+studio)
+Premium
+(agency)
+Brand system + custom
+theme
+₹80,000 ₹2,50,000
+a2-core plugin (full ops/
+ledger/CSR + term charter)
+₹1,20,000 ₹4,00,000
+Film & photo (1 day + post,
+incl. monochrome grade)
+₹35,000 ₹1,20,000
+One-time build total ₹2.5–4 L ₹6–9 L
+Hosting/domain/email per
+year
+₹12,000 ₹50,000
+Premium plugins per year ₹20,000 ₹50,000
+SMS/WhatsApp/email
+sending per year
+₹8,000 ₹30,000
+Recurring/year (excl.
+gateway)
+≈ ₹40k–60k ≈ ₹1.3–1.8 L
+Payment gateway Razorpay standard ≈
+2% per transaction
+same
+
+===== PAGE 35 =====
+18. Acceptance Criteria — Chief Developer
+Handoﬀ Checklist
+•  ☐ a2-ekamra block theme with theme.json tokens exactly
+matching §3 (hex, fonts, spacing, motion, reduced-motion
+handling).
+•  ☐ a2-core plugin: all 26 CPTs / 6 taxonomies per JSON conﬁg;
+full role matrix incl. Operations Coordinator & CSR Manager;
+zone/vertical row-level scoping.
+•  ☐ Banned-term save ﬁlter + CI lint dictionary; L2/L3 role bypass
+only as speciﬁed; editor release checklist enforced.
+•  ☐ Polylang EN/OD with lang-based Odia font switching; Odia
+deck v2 content imported; native reviewer sign-oﬀ recorded.
+•  ☐ /missions two focus cards with SDG 5/8/4 meta and live
+counters; /dashboard four metric blocks (auditor tooltips, Target/
+Veriﬁed), 5-zone matrix, sticky gated prospectus →
+a2_csr_lead.
+•  ☐ /impact 301 → /dashboard; public /products absent; /
+portal/sacred-crafts/ login-gated, noindex, sitemap-
+excluded; a2_product non-public.
+•  ☐ Ledger: veriﬁed-only publication, transient cache, CSV export;
+80/20 chart with anonymized register export.
+•  ☐ PWA oﬄine ﬁeld forms on low-end Android; GPS geofence
+check-in; photo compression.
+•  ☐ Compliance switches admin screen; bilingual footer disclosure;
+gateway domestic-only; PDF acknowledgement with non-80G
+clause; certiﬁcate templates + public verify page.
+•  ☐ Gated CSR drawer + download analytics; readiness tracker;
+EOI pipeline stages.
+•  ☐ WCAG 2.1 AA audit pass; LCP < 2.5 s; WP Activity Log; 2FA;
+backup-restore drill evidence; admin handbook + two recorded
+training sessions.
+•  ☐ Git repo (theme + plugin), README, ACF JSON exports, form
+exports, webhook documentation, staging credentials handover.
+19. Decisions Register (open items for
+
+===== PAGE 36 =====
+foundation leadership)
+1. Domain lock (.in vs .org) and brand usage rules for "A2
+Foundation" + "Mandir Saaf Abhiyan".
+2. Conﬁrm the four dashboard metrics as Year-1 targets; supply any
+veriﬁed baselines.
+3. Approve removal of all public commerce surfaces and re-voicing
+of any existing social checkout links.
+4. Conﬁrm 5-zone names/phases and Sevika/student roster ﬁgures
+(target vs veriﬁed).
+5. Prospectus brief authorship and KPI schedule owner.
+6. Payment collection entity (bank account/KYC holder) pre-
+registration; ﬁscal-sponsor NGO if EOIs convert early.
+7. WhatsApp partner (WATI vs Interakt) and messaging budget.
+8. Named Odia editorial reviewer.
+9. Registration timeline (Trust/Society/Section 8) to set the readiness
+tracker step.
+10. Film/photo shoot date and Sevika consent logistics.
+20. Appendix A — Brand Glossary (governs
+all copy)
+Term Odia Rule
+Seva ସ େ ବା Never translated to "service" in
+Odia copy
+Nirmalya ନି ɨ ମାଲĲ Sacred term; never "garbage"
+Pushpa ପୁč Floral oﬀering, used alongside
+Nirmalya
+Sevika ସ େ ବିକା Honoriﬁc; never "worker/
+employee" publicly
+Ekamra Kshetra ଏକାମɣ  େ ତɝ Proper noun, unchanged
+
+===== PAGE 37 =====
+Mandir Saaf
+Abhiyan
+ମନƩିର ସã
+ଅଭǔଯାନ
+Transliterated campaign name
+Remnant ଅବ ଶ େ ଷ Replaces "waste" in all public
+copy
+Diya ମାଟିଦୀପ Sacred clay lamp
+Livelihood
+remittance
+ଜୀବିକା ପɣ େ ରଣ Public term for direct bank
+transfers
+Self-dependency ଆĖନି ɨ ଭରଶୀଳତା Preferred over "employment"
+Bridge education ସ େ ତʢ ଶିା Remedial schooling
+SDG / CSR / KPI /
+ESG
+kept in Latin Standard practice in Odia
+institutional writing
+21. Appendix B — Maintenance &
+Governance
+•  Monthly: staging-tested updates, backup restore test, security
+scan, KPI review, content-lint audit.
+•  Quarterly: access review (departed volunteers removed), privacy/
+retention cleanup, uptime/performance report, zone roster
+veriﬁcation.
+•  Annually: audit-log archive, platform-generated annual report,
+policy review, registration-status recheck, board attestations for all
+attestation-based claims.
+•  A named platform owner inside the foundation owns the admin
+handbook: adding a project, running a Seva day, approving
+expenses, issuing certiﬁcates, handling data-deletion requests.
+End of master document.
+Build rule restated: Every pixel serves either the sacred narrative or
+the audit trail — and every number on screen traces to a record behind
+
+===== PAGE 38 =====
+the login. Next artifact after sign-oﬀ: the Chief Developer Deck
+(technical solution architecture, sprint breakdown, API contracts, and
+estimate), generated from this document and a2-sitemap-
+config.json.

@@ -1,0 +1,595 @@
+{
+  "generatedAt": "2026-10-29T15:43:54.970Z",
+  "pages": {
+    "kitchen-sink": {
+      "path": "/kitchen-sink",
+      "axeViolations": [],
+      "contrastChecked": 251,
+      "contrastFailures": [],
+      "tabStops": [
+        {
+          "tag": "a",
+          "text": "Skip to content",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 140,
+            "h": 46
+          }
+        },
+        {
+          "tag": "a",
+          "text": "colour",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 40,
+            "h": 16
+          }
+        },
+        {
+          "tag": "a",
+          "text": "type",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 27,
+            "h": 16
+          }
+        },
+        {
+          "tag": "a",
+          "text": "controls",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 51,
+            "h": 16
+          }
+        },
+        {
+          "tag": "a",
+          "text": "surfaces",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 56,
+            "h": 16
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Our Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 148,
+            "h": 48
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Read Story",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 114,
+            "h": 24
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Small",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 69,
+            "h": 44
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Medium",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 96,
+            "h": 48
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Large",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 119,
+            "h": 52
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Pressed",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 98,
+            "h": 48
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Explore Our Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 205,
+            "h": 48
+          }
+        }
+      ],
+      "structure": {
+        "hasMain": true,
+        "mains": 1,
+        "h1Count": 1,
+        "h1Text": "Foundations & primitives",
+        "headingOrder": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "imagesWithoutAlt": 0,
+        "svgDecorative": 54,
+        "svgTotal": 54,
+        "lang": "en-IN"
+      },
+      "fonts": {
+        "body": "__Inter_69d019, __Inter_Fallback_69d019, __Noto_Sans_Oriya_1e0cb1, __Noto_Sans_Oriya_Fallback_1e0cb1, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "display": "__Newsreader_db3e03, \"Source Serif 4\", Georgia, serif"
+      },
+      "smallTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    "ornaments": {
+      "path": "/ornaments",
+      "axeViolations": [],
+      "contrastChecked": 95,
+      "contrastFailures": [],
+      "tabStops": [
+        {
+          "tag": "a",
+          "text": "Skip to content",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 140,
+            "h": 46
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Phase 1 components",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 130,
+            "h": 20
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Landing",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 50,
+            "h": 20
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Our Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 148,
+            "h": 48
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Watch Our Story",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 159,
+            "h": 48
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Skip to content",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 140,
+            "h": 46
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Phase 1 components",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 130,
+            "h": 20
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Landing",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 50,
+            "h": 20
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Our Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 148,
+            "h": 48
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Watch Our Story",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 159,
+            "h": 48
+          }
+        }
+      ],
+      "structure": {
+        "hasMain": true,
+        "mains": 1,
+        "h1Count": 1,
+        "h1Text": "Ornament & art system",
+        "headingOrder": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "imagesWithoutAlt": 0,
+        "svgDecorative": 18,
+        "svgTotal": 26,
+        "lang": "en-IN"
+      },
+      "fonts": {
+        "body": "__Inter_69d019, __Inter_Fallback_69d019, __Noto_Sans_Oriya_1e0cb1, __Noto_Sans_Oriya_Fallback_1e0cb1, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "display": "__Newsreader_db3e03, \"Source Serif 4\", Georgia, serif"
+      },
+      "smallTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    },
+    "landing": {
+      "path": "/",
+      "axeViolations": [],
+      "contrastChecked": 123,
+      "contrastFailures": [],
+      "tabStops": [
+        {
+          "tag": "a",
+          "text": "Skip to content",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 140,
+            "h": 46
+          }
+        },
+        {
+          "tag": "a",
+          "text": "A2 Foundation — home",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 177,
+            "h": 62
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Home",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 40,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "About",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 41,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Our Work",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 64,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 47,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Stories",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 49,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Get Involved",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 89,
+            "h": 44
+          }
+        },
+        {
+          "tag": "button",
+          "text": "Search",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 44,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Donate Now",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 136,
+            "h": 44
+          }
+        },
+        {
+          "tag": "button",
+          "text": "ଓଡ଼ିଆ",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 31,
+            "h": 44
+          }
+        },
+        {
+          "tag": "a",
+          "text": "Our Impact",
+          "outline": true,
+          "boxShadow": false,
+          "rect": {
+            "w": 146,
+            "h": 48
+          }
+        }
+      ],
+      "structure": {
+        "hasMain": true,
+        "mains": 1,
+        "h1Count": 1,
+        "h1Text": "PeoplePlanetPossibility",
+        "headingOrder": [
+          1,
+          2,
+          2,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "imagesWithoutAlt": 0,
+        "svgDecorative": 64,
+        "svgTotal": 66,
+        "lang": "en-IN"
+      },
+      "fonts": {
+        "body": "__Inter_69d019, __Inter_Fallback_69d019, __Noto_Sans_Oriya_1e0cb1, __Noto_Sans_Oriya_Fallback_1e0cb1, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "display": "__Newsreader_db3e03, \"Source Serif 4\", Georgia, serif"
+      },
+      "smallTargets": [],
+      "consoleErrors": [],
+      "failedRequests": []
+    }
+  },
+  "checks": {
+    "overflow": [
+      {
+        "width": 360,
+        "docW": 360,
+        "scrollW": 360,
+        "bodyScrollW": 360,
+        "offenders": [],
+        "offenderCount": 0
+      },
+      {
+        "width": 390,
+        "docW": 390,
+        "scrollW": 390,
+        "bodyScrollW": 390,
+        "offenders": [],
+        "offenderCount": 0
+      },
+      {
+        "width": 768,
+        "docW": 768,
+        "scrollW": 768,
+        "bodyScrollW": 768,
+        "offenders": [],
+        "offenderCount": 0
+      },
+      {
+        "width": 1024,
+        "docW": 1024,
+        "scrollW": 1024,
+        "bodyScrollW": 1024,
+        "offenders": [],
+        "offenderCount": 0
+      },
+      {
+        "width": 1440,
+        "docW": 1440,
+        "scrollW": 1440,
+        "bodyScrollW": 1440,
+        "offenders": [],
+        "offenderCount": 0
+      },
+      {
+        "width": 1920,
+        "docW": 1920,
+        "scrollW": 1920,
+        "bodyScrollW": 1920,
+        "offenders": [],
+        "offenderCount": 0
+      }
+    ],
+    "reducedMotion": {
+      "revealVisible": true,
+      "elementsWithMotion": 0,
+      "prefersReduced": true
+    },
+    "zoom200": {
+      "scrollW": 1440,
+      "clientW": 1440
+    },
+    "focusRing": {
+      "stops": 55,
+      "blind": []
+    }
+  },
+  "summary": {
+    "passed": 40,
+    "warnings": 0,
+    "failed": 0
+  },
+  "pass": [
+    "kitchen-sink — axe-core: 0 violations (WCAG 2.2 A/AA + best practice)",
+    "kitchen-sink — contrast: all 251 unique text/background pairs pass",
+    "kitchen-sink — console: 0 errors",
+    "kitchen-sink — network: 0 failed requests",
+    "kitchen-sink — exactly one h1",
+    "kitchen-sink — main landmark present",
+    "kitchen-sink — all images have alt",
+    "kitchen-sink — focus ring visible on all 12 sampled tab stops",
+    "kitchen-sink — all primary controls ≥ 44px",
+    "kitchen-sink — fonts: Inter + Newsreader applied (next/font)",
+    "ornaments — axe-core: 0 violations (WCAG 2.2 A/AA + best practice)",
+    "ornaments — contrast: all 95 unique text/background pairs pass",
+    "ornaments — console: 0 errors",
+    "ornaments — network: 0 failed requests",
+    "ornaments — exactly one h1",
+    "ornaments — main landmark present",
+    "ornaments — all images have alt",
+    "ornaments — focus ring visible on all 10 sampled tab stops",
+    "ornaments — all primary controls ≥ 44px",
+    "ornaments — fonts: Inter + Newsreader applied (next/font)",
+    "landing — axe-core: 0 violations (WCAG 2.2 A/AA + best practice)",
+    "landing — contrast: all 123 unique text/background pairs pass",
+    "landing — console: 0 errors",
+    "landing — network: 0 failed requests",
+    "landing — exactly one h1",
+    "landing — main landmark present",
+    "landing — all images have alt",
+    "landing — focus ring visible on all 12 sampled tab stops",
+    "landing — all primary controls ≥ 44px",
+    "landing — fonts: Inter + Newsreader applied (next/font)",
+    "overflow — 360px: no horizontal overflow",
+    "overflow — 390px: no horizontal overflow",
+    "overflow — 768px: no horizontal overflow",
+    "overflow — 1024px: no horizontal overflow",
+    "overflow — 1440px: no horizontal overflow",
+    "overflow — 1920px: no horizontal overflow",
+    "reduced-motion — all transition/animation durations collapse to ~0",
+    "reduced-motion — reveal content is visible immediately under reduce",
+    "zoom-200% — no horizontal scroll at 200% text size",
+    "focus-ring — all 55 tab stops show a visible focus indicator"
+  ],
+  "warn": [],
+  "fail": []
+}

@@ -1,0 +1,633 @@
+{
+  "generatedAt": "2026-10-29T15:44:55.206Z",
+  "summary": {
+    "passed": 123,
+    "warnings": 1,
+    "failed": 0
+  },
+  "results": [
+    {
+      "status": "warn",
+      "scope": "dead-code",
+      "msg": "1 export(s) never imported",
+      "detail": [
+        "IconArrowUpRight (components/icons/index.tsx)"
+      ]
+    },
+    {
+      "status": "pass",
+      "scope": "deprecation",
+      "msg": "themeColor is declared in `export const viewport` (current API)"
+    },
+    {
+      "status": "pass",
+      "scope": "tokens",
+      "msg": "60 CSS custom properties declared in brand/tokens.css (single source of truth)"
+    },
+    {
+      "status": "pass",
+      "scope": "tokens",
+      "msg": "preset exposes 8 colour families: cream, sand, ink, forest, rust, ochre, foliage, gold"
+    },
+    {
+      "status": "pass",
+      "scope": "tokens",
+      "msg": "preset ↔ tokens.css parity: every hex in the preset also exists in the CSS layer (23 values)"
+    },
+    {
+      "status": "pass",
+      "scope": "build",
+      "msg": "app-build-manifest present — 6 route bundle(s)"
+    },
+    {
+      "status": "pass",
+      "scope": "build",
+      "msg": "CSS bundle 56.0 kB (uncompressed) served from .next/static/css"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "HTTP 200 · load 254ms"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "title \"A2 Foundation — People · Planet · Possibility\" (45 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "meta description present (141 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "viewport meta \"width=device-width, initial-scale=1\""
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "Open Graph title present"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "Open Graph image https://a2foundation.org/og.png (1200×630)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "lang=\"en-IN\""
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "canonical https://a2foundation.org"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "exactly one h1"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "heading order has no skipped levels"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "<main> present exactly once"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "every <img> has alt"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "every <img> reserves width/height (no CLS)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "every form control has an accessible label"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "every button/link has an accessible name"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "no positive tabindex (DOM order = tab order)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "no duplicate element ids"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "no async UI on this page, so no live region is required"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "console: 0 errors"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "network: 0 failed requests"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "zero third-party requests (fonts/CSS/JS all self-hosted)"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "5 self-hosted font file(s) served: 4ae51a0f72b23085-s.p.woff2, 4b9bb515ce6d026f.p.woff2, 5611c55482296524.p.woff2 …"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "FCP 246ms"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "DOMContentLoaded 74ms · load 252ms"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "page weight 670.5 kB over 35 requests"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "1170 DOM nodes"
+    },
+    {
+      "status": "pass",
+      "scope": "landing",
+      "msg": "no resource over 400ms"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "HTTP 200 · load 192ms"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "title \"Component sheet · A2 Foundation\" (31 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "meta description present (131 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "viewport meta \"width=device-width, initial-scale=1\""
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "Open Graph title present"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "Open Graph image https://a2foundation.org/og.png (1200×630)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "lang=\"en-IN\""
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "canonical https://a2foundation.org/kitchen-sink"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "exactly one h1"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "heading order has no skipped levels"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "<main> present exactly once"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "every <img> has alt"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "every <img> reserves width/height (no CLS)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "every form control has an accessible label"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "every button/link has an accessible name"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "no positive tabindex (DOM order = tab order)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "no duplicate element ids"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "1 live region(s) for announced state"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "console: 0 errors"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "network: 0 failed requests"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "zero third-party requests (fonts/CSS/JS all self-hosted)"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "5 self-hosted font file(s) served: 4ae51a0f72b23085-s.p.woff2, 4b9bb515ce6d026f.p.woff2, 5611c55482296524.p.woff2 …"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "FCP 182ms"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "DOMContentLoaded 160ms · load 191ms"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "page weight 337.5 kB over 12 requests"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "787 DOM nodes"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "no resource over 400ms"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "HTTP 200 · load 165ms"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "title \"Ornament system · A2 Foundation\" (31 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "meta description present (131 chars)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "viewport meta \"width=device-width, initial-scale=1\""
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "Open Graph title present"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "Open Graph image https://a2foundation.org/og.png (1200×630)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "lang=\"en-IN\""
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "canonical https://a2foundation.org/ornaments"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "exactly one h1"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "heading order has no skipped levels"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "<main> present exactly once"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "every <img> has alt"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "every <img> reserves width/height (no CLS)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "every form control has an accessible label"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "every button/link has an accessible name"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "no positive tabindex (DOM order = tab order)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "no duplicate element ids"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "no async UI on this page, so no live region is required"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "console: 0 errors"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "network: 0 failed requests"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "zero third-party requests (fonts/CSS/JS all self-hosted)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "5 self-hosted font file(s) served: 4ae51a0f72b23085-s.p.woff2, 4b9bb515ce6d026f.p.woff2, 5611c55482296524.p.woff2 …"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "FCP 157ms"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "DOMContentLoaded 137ms · load 164ms"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "page weight 393.2 kB over 19 requests"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "983 DOM nodes"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "no resource over 400ms"
+    },
+    {
+      "status": "pass",
+      "scope": "kitchen-sink",
+      "msg": "review sheet is noindex, nofollow (stays out of search)"
+    },
+    {
+      "status": "pass",
+      "scope": "ornaments",
+      "msg": "review sheet is noindex, nofollow (stays out of search)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "320px: no horizontal overflow (320px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "360px: no horizontal overflow (360px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "390px: no horizontal overflow (390px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "414px: no horizontal overflow (414px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "480px: no horizontal overflow (480px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "768px: no horizontal overflow (768px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "834px: no horizontal overflow (834px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "1024px: no horizontal overflow (1024px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "1280px: no horizontal overflow (1280px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "1440px: no horizontal overflow (1440px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "1600px: no horizontal overflow (1600px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "1920px: no horizontal overflow (1920px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "responsive",
+      "msg": "2560px: no horizontal overflow (2560px document)"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "invalid email → role=alert + aria-invalid=\"true\" (\"Please enter a valid email address.\")"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "valid email → role=status (\"Thank you — check your inbox to confirm.\")"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "skip link is the first tab stop, visible on focus (\"Skip to content\") with a ring"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "visible focus indicator on all 25 tab stops walked with the keyboard"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "one focus treatment (rgb(171, 61, 36) | rgb(201, 169, 97)) — dark surfaces flip to gold"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "19 focusable elements in the document; the 26 above are keyboard-reachable from the top"
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "tab order starts at: \"Small\""
+    },
+    {
+      "status": "pass",
+      "scope": "interaction",
+      "msg": "forced :hover applies rust-hover rgb(171, 61, 36) → rgb(150, 51, 29)"
+    },
+    {
+      "status": "pass",
+      "scope": "motion",
+      "msg": "prefers-reduced-motion: every duration is 0"
+    },
+    {
+      "status": "pass",
+      "scope": "motion",
+      "msg": "all 3 reveal elements visible immediately under reduce"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "200% text size: reflows without horizontal scroll"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "300% text size: reflows without horizontal scroll"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/ @ 200% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/ @ 300% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/kitchen-sink @ 200% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/kitchen-sink @ 300% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/ornaments @ 200% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "/ornaments @ 300% text: every control stays inside the viewport"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "hero clears the fixed header at 100% text (h1 136px ≥ bar 92px)"
+    },
+    {
+      "status": "pass",
+      "scope": "zoom",
+      "msg": "hero clears the fixed header at 200% text (h1 180px ≥ bar 92px)"
+    },
+    {
+      "status": "pass",
+      "scope": "brand",
+      "msg": "16 distinct rendered colours; all within 12/255 of a tokens.css value (tints only, no foreign hues)"
+    }
+  ]
+}

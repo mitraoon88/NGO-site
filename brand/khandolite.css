@@ -1,0 +1,145 @@
+/* =============================================================================
+   KHANDOLITE TOKENS — CSS custom properties
+   =============================================================================
+   Generated from brand/khandolite.tokens.mjs. Do not hand-edit values here;
+   edit the .mjs and keep the two in step (validation/check-khandolite.mjs
+   compares them and fails on drift).
+
+   Blueprint: A2-FOUNDATION-FINAL-PLATFORM-BLUEPRINT.pdf §3.1–3.4
+   ========================================================================== */
+
+:root {
+  /* ── colour ─────────────────────────────────────────────────────────────── */
+  --a2-terracotta:        #B84A39;   /* fills, accents, display type ≥24px       */
+  --a2-terracotta-hover:  #A64333;
+  --a2-terracotta-wash:   #FAEDE9;
+  --a2-terracotta-deep:   #A94434;   /* terracotta TEXT below 24px — 5.70 on cream */
+
+  --a2-marigold:          #F2B705;   /* DARK SURFACES ONLY — 1.76 on cream        */
+
+  --a2-charcoal:          #262626;   /* 14.64 on cream — AAA                      */
+  --a2-charcoal-soft:     #4A4A4A;   /* 8.57                                              */
+  --a2-charcoal-muted:    #666666;   /* 5.56 cream · 4.73 stone-tint                      */
+
+  --a2-cream:             #FDFBF7;   /* base canvas                               */
+  --a2-cream-deep:        #F7F2EA;
+
+  --a2-stone-tint:        #F3E7DE;   /* card fills, table zebra                   */
+  --a2-stone-tint-soft:   #F9F2EC;
+
+  --a2-line-sand:         #E3D5C8;   /* decorative hairline — NOT a control border */
+  --a2-line-sand-strong:  #8C7D6F;   /* 3.85 cream · 3.28 stone — use for inputs    */
+
+  /* ── type ───────────────────────────────────────────────────────────────── */
+  --a2-font-display: "Playfair Display", "Lora", Georgia, "Times New Roman", serif;
+  --a2-font-sans:    "Plus Jakarta Sans", Inter, -apple-system, "Segoe UI", sans-serif;
+  --a2-font-odia-serif: "Noto Serif Oriya", "Playfair Display", serif;
+  --a2-font-odia-sans:  "Noto Sans Oriya", "Plus Jakarta Sans", sans-serif;
+
+  --a2-text-display-xl: clamp(3rem, 5.6vw, 4.5rem);
+  --a2-text-display-lg: clamp(2.25rem, 4vw, 3.25rem);
+  --a2-text-display-md: clamp(1.5rem, 2.4vw, 2rem);
+  --a2-text-heading-sm: 1.0625rem;
+  --a2-text-lead:       clamp(1.0625rem, 1.2vw, 1.125rem);
+  --a2-text-body:       1.0625rem;
+  --a2-text-body-sm:    0.9375rem;
+  --a2-text-table:      0.875rem;
+  --a2-text-ui:         0.875rem;
+  --a2-text-note:       0.8125rem;
+  --a2-text-eyebrow:    0.75rem;
+  --a2-text-micro:      0.6875rem;
+
+  /* ── layout ─────────────────────────────────────────────────────────────── */
+  --a2-page: 1280px;
+  --a2-copy: 640px;
+  --a2-measure: 68ch;
+  --a2-gutter: 24px;
+  --a2-pad-section: 56px;
+  --a2-radius-btn: 3px;
+  --a2-radius-card: 4px;
+
+  /* ── motion ─────────────────────────────────────────────────────────────── */
+  --a2-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --a2-ease-hover: cubic-bezier(0.4, 0, 0.2, 1);
+  --a2-dur-reveal: 600ms;
+  --a2-dur-hover: 200ms;
+
+  /* ── header height, published by the header so the hero can clear it ─────── */
+  --a2-header-h: 92px;
+}
+
+@media (min-width: 768px) {
+  :root { --a2-pad-section: 80px; }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --a2-pad-section: 96px;
+    --a2-gutter: 80px;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   BILINGUAL FONT SWITCHING — blueprint §3.2
+   "Latin fonts contain no Odia glyphs — the theme switches font stacks by
+   lang="or"." Applied at the element that carries lang, so a single Odia
+   quotation inside an English page renders correctly without a page reload.
+   -------------------------------------------------------------------------- */
+
+[lang="or"] {
+  font-family: var(--a2-font-odia-sans);
+}
+
+[lang="or"] h1,
+[lang="or"] h2,
+[lang="or"] h3,
+[lang="or"] h4,
+[lang="or"] .a2-display {
+  font-family: var(--a2-font-odia-serif);
+}
+
+/* Odia needs more vertical room than Latin at the same nominal size — the
+   script has matras above and below the baseline (blueprint §3.2 implies it;
+   measured here: 1.75 reads too tight, 1.8 does not). */
+[lang="or"] p,
+[lang="or"] li {
+  line-height: 1.8;
+}
+
+/* -----------------------------------------------------------------------------
+   REDUCED MOTION — blueprint §3.4. Every animation collapses. Nothing is
+   removed, so layout is identical; only the transition is.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .a2-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   ONE FOCUS TREATMENT — the A2 lesson that cost twelve invisible tab stops.
+   Tailwind's `focus-visible:outline-none` compiles to `outline: 2px solid
+   transparent`, which still reports outline-style:solid. This block is
+   unlayered so it wins over any utility.
+   -------------------------------------------------------------------------- */
+
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--a2-terracotta) !important;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.on-dark :where(a, button, input, select, textarea, [tabindex]):focus-visible,
+.bg-charcoal :where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline-color: var(--a2-marigold) !important;
+}

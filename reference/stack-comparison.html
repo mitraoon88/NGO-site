@@ -1,0 +1,196 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Setu vs A2 — adaptability against the A2 Blueprint</title>
+<style>
+  :root{--cream:#FBF7F0;--paper:#FFFDF9;--ink:#1C1C1A;--soft:#3A3A38;--forest:#11231B;
+         --rust:#AB3D24;--gold:#C9A961;--line:#E2D9C9;--setu:#4C7A5F;--a2c:#AB3D24}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--cream);color:var(--ink);
+        font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:44px 26px 90px}
+  header.doc{border-bottom:3px solid var(--forest);padding-bottom:24px;margin-bottom:30px}
+  .kick{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-weight:700}
+  h1{font-size:38px;line-height:1.1;margin:10px 0 8px;letter-spacing:-.02em;
+      font-family:Georgia,serif;font-weight:500}
+  .sub{color:var(--soft);max-width:78ch}
+  h2{font-size:12.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--rust);
+      margin:46px 0 4px;font-weight:700}
+  h2+.lede{color:var(--soft);margin:0 0 16px;font-size:14px;max-width:80ch}
+  .verdict{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:22px 0}
+  .vcard{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 22px}
+  .vcard.win{border:2px solid var(--a2c)}
+  .vcard h3{margin:0 0 2px;font-size:19px;font-family:Georgia,serif;font-weight:500}
+  .vcard .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+  .big{font-size:34px;font-family:Georgia,serif;color:var(--forest);margin:10px 0 2px}
+  .vcard.win .big{color:var(--a2c)}
+  table{width:100%;border-collapse:collapse;font-size:13px;background:var(--paper)}
+  th{text-align:left;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--soft);
+      border-bottom:2px solid var(--line);padding:9px 8px;position:sticky;top:0;background:var(--paper)}
+  td{padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+  td.mref{font-family:ui-monospace,Menlo,monospace;font-size:11.5px;color:var(--soft);white-space:nowrap}
+  td.w{text-align:center;color:var(--soft);font-variant-numeric:tabular-nums}
+  td.ev{font-size:11.5px;color:var(--soft);line-height:1.5}
+  .bar{display:flex;align-items:center;gap:7px;min-width:104px}
+  .bar i{display:block;height:7px;border-radius:2px;background:#DDD3C2}
+  .bar i.s{background:var(--setu)} .bar i.a{background:var(--a2c)}
+  .bar b{font-size:11px;font-variant-numeric:tabular-nums;color:var(--soft);min-width:30px}
+  .scroll{max-height:760px;overflow:auto;border:1px solid var(--line);border-radius:4px}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:20px 24px;margin:14px 0}
+  ul{margin:8px 0;padding-left:20px} li{margin:6px 0}
+  .crit{border-left:3px solid var(--rust);background:#FDF1ED;padding:14px 18px;margin:14px 0;font-size:14.5px}
+  .good{border-left:3px solid #2F6B3F;background:#F0F6F1;padding:14px 18px;margin:14px 0;font-size:14.5px}
+  code{background:#F1E9DB;padding:1px 5px;border-radius:2px;font-size:12.5px}
+  .rec{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0}
+  .rec>div{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:16px 18px}
+  .rec h4{margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--rust)}
+  .rec p{margin:0;font-size:13px;color:var(--soft)}
+  @media(max-width:820px){.verdict,.rec{grid-template-columns:1fr} h1{font-size:28px}}
+  footer{margin-top:50px;padding-top:16px;border-top:1px solid var(--line);font-size:12px;color:var(--soft)}
+</style></head><body><div class="wrap">
+
+<header class="doc">
+  <div class="kick">A2 Foundation · platform decision</div>
+  <h1>Setu vs A2 — which codebase adapts to the blueprint?</h1>
+  <p class="sub">Both repositories were measured against <b>A2-FOUNDATION-FINAL-PLATFORM-BLUEPRINT.pdf</b>
+  (A2-WP-FINAL-v4.0, 38 pages, 6,716 words) — requirement by requirement, from the code that
+  actually exists in each repo. Coverage is weighted by build effort and risk, not by count.</p>
+  <div class="verdict">
+    <div class="vcard">
+      <div class="tag">ngo-site-reference · Setu Foundation</div>
+      <h3>Headless WordPress + Next.js</h3>
+      <div class="big">17%</div>
+      <p class="sub" style="margin:0;font-size:13.5px">of the blueprint, weighted. Strong where the
+      blueprint is hardest to fake — a real plugin, a real payment loop, real consent gates — and
+      empty where it is widest: 3 of 26 CPTs, no roles, no zones, no Odia.</p>
+    </div>
+    <div class="vcard win">
+      <div class="tag">a2-foundation · this project</div>
+      <h3>Next.js + token system, no backend yet</h3>
+      <div class="big">25%</div>
+      <p class="sub" style="margin:0;font-size:13.5px">of the blueprint, weighted. Complete on the
+      front-end half (design system, home, accessibility, handover) and absent on the platform half —
+      no CMS, no CPTs, no payments. But nothing in it <i>contradicts</i> the blueprint.</p>
+    </div>
+  </div>
+</header>
+
+<h2>1 · The honest headline</h2>
+<div class="crit"><b>Neither codebase is an A2 platform today.</b> The blueprint is a 26-CPT,
+9-role, 3-layer WordPress system with a 14-week build. Setu is a 3-route NGO brochure site;
+A2 is a 1-route (plus shells) homepage with an exceptional design system. The real question is not
+"which is closer" but <b>which is the better starting point for the 14 weeks ahead</b> — and those
+have different answers depending on what you keep.</div>
+
+<div class="good"><b>The answer is not either/or.</b> Setu's WordPress layer is ~1,452 lines of
+production-shaped code the blueprint demands and A2 has none of: a mu-plugin, REST endpoints, an
+HMAC-verified Razorpay webhook, revalidation, and consent-gated publishing. A2's front-end is a
+token-enforced, accessibility-proven design system that Setu's generic green/terracotta UI cannot
+approach. The blueprint asks for exactly this split — <i>“all business logic in a2-core; nothing in
+functions.php”</i> — so the recommended path is <b>Setu's PHP engine + A2's design system</b>,
+not a rewrite of either.</div>
+
+<h2>2 · Requirement-by-requirement</h2>
+<p class="lede">Coverage is what exists in the repo today. A row at 0% means no code, not
+"not planned" — A2's Phase 6 spec plans six CPTs and five REST endpoints, which would move
+§8 and §11 substantially.</p>
+
+<div class="scroll"><table>
+<tr><th>Spec</th><th>Requirement</th><th>W</th><th>Setu</th><th>A2</th><th>Evidence</th></tr>
+<tr><td class=mref>§3.1-3.2</td><td>Brand tokens + type system (Khandolite Scale)</td><td class=w>4</td><td><div class="bar"><i class="f s" style="width:20%"></i><b>20%</b></div></td><td><div class="bar"><i class="f a" style="width:55%"></i><b>55%</b></div></td><td class=ev>A2: full token system, 4 fonts, contrast-audited — but palette/type differ from spec. Setu: generic green/terracotta.</td></tr><tr><td class=mref>§3.3-3.6</td><td>Layout grid, motion, cinematic assets, icon/texture rules</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:25%"></i><b>25%</b></div></td><td><div class="bar"><i class="f a" style="width:60%"></i><b>60%</b></div></td><td class=ev>A2: 12-col-equivalent container, reduced-motion, custom line-art icons+ornaments. Setu: tokens + reveal only.</td></tr><tr><td class=mref>§5.2</td><td>20 routed views (Layer 1/2/3)</td><td class=w>4</td><td><div class="bar"><i class="f s" style="width:15%"></i><b>15%</b></div></td><td><div class="bar"><i class="f a" style="width:30%"></i><b>30%</b></div></td><td class=ev>Setu: 3 real routes. A2: 1 real + 16 accessible noindex shells (closest mechanism to the 301/noindex rules).</td></tr><tr><td class=mref>§6.1</td><td>Home: cinematic hero, metric strip, pillar/mission preview, ledger strip</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:30%"></i><b>30%</b></div></td><td><div class="bar"><i class="f a" style="width:45%"></i><b>45%</b></div></td><td class=ev>A2: full 11-band editorial home, but generic NGO copy. Setu: home present, no pillars/ledger strip.</td></tr><tr><td class=mref>§6.4</td><td>Impact Dashboard: 4 metrics, 5-zone matrix, sticky prospectus</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:0%"></i><b>0%</b></div></td><td><div class="bar"><i class="f a" style="width:10%"></i><b>10%</b></div></td><td class=ev>Neither builds it. A2 has a static impact band only.</td></tr><tr><td class=mref>§6.5</td><td>Transparency ledger: verified-only, filterable, CSV export, 15-min cache</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:20%"></i><b>20%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Setu: static trust UI + document cards (no query, no CSV, no CPT feed). A2: none.</td></tr><tr><td class=mref>§6.6</td><td>CSR portal: gated drawer, readiness tracker, EOI pipeline</td><td class=w>2</td><td><div class="bar"><i class="f s" style="width:0%"></i><b>0%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Neither.</td></tr><tr><td class=mref>§8</td><td>26 CPTs + 6 taxonomies</td><td class=w>5</td><td><div class="bar"><i class="f s" style="width:12%"></i><b>12%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Setu: 3 CPTs (programme/story/document) + 2 taxonomies = 12%. A2: none, but Phase 6 spec exists.</td></tr><tr><td class=mref>§9</td><td>9-role matrix + row-level zone/vertical scoping</td><td class=w>4</td><td><div class="bar"><i class="f s" style="width:0%"></i><b>0%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Neither. Setu uses WP's built-in post caps only; no add_role, no pre_get_posts.</td></tr><tr><td class=mref>§10</td><td>7 operating workflows (Seva loop, drives, Sevika, education, CSR, contribution)</td><td class=w>4</td><td><div class="bar"><i class="f s" style="width:20%"></i><b>20%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Setu: contribution flow is real end-to-end (intent→gateway→webhook). A2: newsletter only.</td></tr><tr><td class=mref>§11.1-11.2</td><td>WP block theme a2-ekamra + a2-core plugin, plugin stack</td><td class=w>5</td><td><div class="bar"><i class="f s" style="width:35%"></i><b>35%</b></div></td><td><div class="bar"><i class="f a" style="width:5%"></i><b>5%</b></div></td><td class=ev>Setu: working WP mu-plugin (1,452 lines), REST seam, HMAC webhook, revalidate — but headless, not a block theme. A2: zero WP.</td></tr><tr><td class=mref>§11.3-11.4</td><td>Ledger query spec, hosting, performance budgets (LCP<2.5s)</td><td class=w>2</td><td><div class="bar"><i class="f s" style="width:20%"></i><b>20%</b></div></td><td><div class="bar"><i class="f a" style="width:45%"></i><b>45%</b></div></td><td class=ev>A2: measured weight/console/network, sharp, self-hosted fonts. Setu: docs only.</td></tr><tr><td class=mref>§12</td><td>Metrics governance: Target/Verified states, no hand-typed counters</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:0%"></i><b>0%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Neither. A2's counters are hard-coded in content/home.ts — exactly what §12 forbids.</td></tr><tr><td class=mref>§13</td><td>Compliance architecture: hard switches, permitted/prohibited, bilingual disclosure</td><td class=w>5</td><td><div class="bar"><i class="f s" style="width:0%"></i><b>0%</b></div></td><td><div class="bar"><i class="f a" style="width:0%"></i><b>0%</b></div></td><td class=ev>Neither implements switches. Critically, Setu's copy *asserts* '80G & FCRA compliant' and 'Instant 80G e-receipt' — prohibited for an unregistered entity. A2 is neutral.</td></tr><tr><td class=mref>§14</td><td>SEO/schema (NGO/Dataset/Event), hreflang EN-OD, GA4 goals</td><td class=w>3</td><td><div class="bar"><i class="f s" style="width:25%"></i><b>25%</b></div></td><td><div class="bar"><i class="f a" style="width:30%"></i><b>30%</b></div></td><td class=ev>Setu: robots + sitemap.ts. A2: metadata + 16 noindex shells + Odia font stack.</td></tr><tr><td class=mref>§18.11</td><td>WCAG 2.1 AA audit pass (contractual)</td><td class=w>4</td><td><div class="bar"><i class="f s" style="width:25%"></i><b>25%</b></div></td><td><div class="bar"><i class="f a" style="width:100%"></i><b>100%</b></div></td><td class=ev>A2: axe 40/0/0, 469 contrast pairs, focus-ring gate, 19/19 UX audit. Setu: intent only, unaudited.</td></tr><tr><td class=mref>§18.12</td><td>Git repo, README, exports, webhook docs, handover</td><td class=w>2</td><td><div class="bar"><i class="f s" style="width:60%"></i><b>60%</b></div></td><td><div class="bar"><i class="f a" style="width:90%"></i><b>90%</b></div></td><td class=ev>Both documented; A2 adds sign-off artefacts + reproducible harness.</td></tr>
+</table></div>
+
+<h2>3 · Where each one genuinely wins</h2>
+<div class="rec">
+  <div><h4>Setu wins</h4><p>WordPress engine &amp; REST seam · payment loop with HMAC webhook ·
+  consent-gated publishing · compliance sections · PWA groundwork · a vetted, documented
+  content-model discipline.</p></div>
+  <div><h4>A2 wins</h4><p>Design tokens, 4 font stacks, measured contrast · the 11-band editorial
+  home · accessibility with proof (axe 40/0/0, 469 pairs, focus-ring gate) · 19/19 UX audit ·
+  reproducible sign-off harness.</p></div>
+  <div><h4>Neither has it</h4><p>26 CPTs · 9 roles + row-level scoping · 5 zones · the dashboard ·
+  the transparency ledger as a live query · CSR gating · compliance switches · Odia/Polylang ·
+  metrics governance.</p></div>
+</div>
+
+<h2>4 · Three blockers that make this decision urgent</h2>
+<div class="crit">
+<b>1. Setu ships claims the blueprint prohibits.</b> Its header reads <i>“80G &amp; FCRA compliant”</i>
+and its CTA promises <i>“Instant 80G e-receipt”</i>. Blueprint §13.2 lists exactly these under
+<b>Prohibited until registered</b>, and §13.1 gates them behind a hard admin switch that is
+<code>default OFF</code>. A2 Foundation is an unregistered voluntary initiative. Reusing Setu's copy
+or its receipt flow is a legal exposure, not a styling issue.
+</div>
+<div class="crit">
+<b>2. A2's content contradicts the blueprint's locked copy and term charter.</b> The built H1 is
+“People / Planet / Possibility” and the metrics are “150K+ Lives Touched · 350+ Communities ·
+120+ Projects · 12+ Years”. Blueprint §6.1 locks the H1 to <i>“Preserving Sacred Sanctity.
+Incubating Grassroots Dignity.”</i> and §12 fixes the four counters to 150+ Metric Tons ·
+1,200+ Compliance Hours · 100% Direct Banking · 60+ Children Sustained — <b>rendered only from the
+metric subsystem, never hand-typed</b>. A2's counters are hand-typed in
+<code>content/home.ts</code>. Also prohibited by §0.2/§4.2: “Donate” should be
+<b>Voluntary Contribution</b>. The A2 mockup is a generic NGO design; the blueprint is a specific
+institution — the front-end can host either, but the copy layer must be replaced wholesale.
+</div>
+<div class="crit">
+<b>3. Both differ from the blueprint's mandated stack.</b> §11.1 requires a <b>WordPress block
+theme</b> (<code>a2-ekamra</code>) with <code>theme.json</code> tokens and business logic in
+<code>a2-core</code>. Setu is headless — it explicitly accepts that “editors cannot build new page
+layouts themselves”, which conflicts with a block theme but is defensible if the client agrees.
+A2 is Next.js with no WordPress at all, so its 2-day “Phase 6 WordPress content model” would have to
+grow into the full §8 data model. Its own README already states the hybrid PHP fallback.
+</div>
+
+<h2>5 · Recommendation</h2>
+<div class="card">
+<ol>
+  <li><b>Take Setu's PHP layer as the seed of <code>a2-core</code>.</b> Keep the mu-plugin
+  architecture, the REST seam, the HMAC webhook pattern and the consent gate. Discard its three
+  CPTs' field shapes only where the blueprint's 26 override them. This is the single largest
+  saving available — roughly §11.1–11.2, the highest-weight row, at 35% already rather than 5%.</li>
+  <li><b>Take A2's design system, not Setu's UI.</b> But retarget it to the blueprint's Khandolite
+  tokens: <code>terracotta #B84A39</code>, <code>marigold #F2B705</code>,
+  <code>charcoal #262626</code>, <code>cream #FDFBF7</code>, Playfair/Lora + Plus Jakarta Sans,
+  Noto Serif/Sans Oriya. A2's tokens are close in spirit (rust #AB3D24, gold #C9A961, cream
+  #FBF7F0) but are mockup-derived, not spec-derived. Its token-parity check makes this a
+  one-file change plus a re-audit — which is exactly what that harness exists for.</li>
+  <li><b>Replace A2's entire copy layer against §6.1/§7/§12/§4.2</b> before any further build.
+  Route the built components at the seven Sacred Pillars and the four governed metrics; drop the
+  generic “Lives Touched” band rather than restyling it.</li>
+  <li><b>Then build what neither has, in blueprint order:</b> CPTs + roles + zones (§8–9) →
+  dashboard + ledger (§6.4–6.5, §12) → contributions with compliance switches (§13) → CSR gating
+  (§6.6) → Odia/Polylang (§4.2, §7).</li>
+  <li><b>Keep A2's validation harness regardless of stack.</b> axe 40/0/0, 469 contrast pairs,
+  the keyboard focus-ring gate, 17 fidelity rows and the one-command sign-off are contractual
+  under §18.11 and do not exist on the Setu side at all.</li>
+</ol>
+</div>
+
+<h2>6 · If you must pick exactly one</h2>
+<p class="lede">Stated plainly, because the two score differently depending on the axis.</p>
+<div class="card">
+<table>
+<tr><th style="width:34%">Axis</th><th>Winner</th><th>Why</th></tr>
+<tr><td>Adaptability to the blueprint as a <b>platform</b></td><td><b>Setu</b></td>
+<td>It already has WordPress, a plugin seam, roles-ready CPTs and a payment loop. A2 has none of the backend; its path to §8 is build-from-zero.</td></tr>
+<tr><td>Adaptability on the <b>public Layer 1</b> experience</td><td><b>A2</b></td>
+<td>The blueprint's L1 is “cinematic, editorial, bilingual”. A2's is measurably editorial and accessible; Setu's is a competent generic NGO template.</td></tr>
+<tr><td>Adaptability as <b>this project's live deliverable</b></td><td><b>A2</b></td>
+<td>25% vs 17% weighted, nothing contradicting the spec in its code, a reproducible gate, and a sign-off artefact the client can approve today.</td></tr>
+<tr><td>Risk of legal/compliance harm if adopted as-is</td><td><b>A2</b> (far safer)</td>
+<td>Setu's 80G/FCRA claims are prohibited for an unregistered entity. A2 is neutral — it has no receipt language to retract.</td></tr>
+</table>
+</div>
+
+<div class="good"><b>Bottom line.</b> On the blueprint as written, <b>Setu is the more adaptable
+<i>engine</i> and A2 is the more adaptable <i>product</i></b>. Neither adapts alone, and the gap to
+the blueprint is large on both sides (17% / 25%). The cheapest credible route to a 14-week build is
+Setu's WordPress core under A2's design system, with A2's mockup copy replaced by the blueprint's
+locked copy before anything else ships.</div>
+
+<footer>
+Measured against A2-FOUNDATION-FINAL-PLATFORM-BLUEPRINT.pdf (A2-WP-FINAL-v4.0) · 17 weighted
+requirements · coverage read from source in both repositories, not from their documentation claims ·
+Setu: 75 tracked files, 1,452-line mu-plugin, 3 routes · A2: 11 bands, 22 built pages, axe 40/0/0,
+fidelity 17/0.
+</footer>
+</div></body></html>

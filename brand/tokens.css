@@ -1,0 +1,245 @@
+/* ============================================================================
+   A2 FOUNDATION — design tokens
+   Reverse-engineered from the client's homepage mockup (809 × 1945 capture).
+   Values are sampled; the three marked "adapted" are accessibility corrections.
+
+   Usage: import this once, then use variables (CSS) or the Tailwind preset.
+   ========================================================================== */
+
+:root {
+  /* ── Surfaces ─────────────────────────────────────────────────────────── */
+  --a2-cream:        #FBF7F0;   /* page background                              */
+  --a2-cream-deep:   #F6EFE3;   /* card / input surfaces over cream             */
+  --a2-sand:         #E8DBC4;   /* hairline rules + ornament line-art           */
+  --a2-sand-soft:    #F1E7D6;   /* decorative foliage tint                      */
+  --a2-white:        #FFFFFF;
+
+  /* ── Ink ──────────────────────────────────────────────────────────────── */
+  --a2-ink:          #1C1C1A;   /* headings           15.98:1 on cream  AAA     */
+  --a2-ink-soft:     #3A3A38;   /* body copy          10.67:1 on cream  AAA     */
+  --a2-ink-muted:    #6B6B66;   /* captions, dates                               */
+
+  /* ── Dark greens ──────────────────────────────────────────────────────── */
+  --a2-forest:       #11231B;   /* OUR IMPACT band                               */
+  --a2-forest-deep:  #0E231D;   /* footer                                        */
+  --a2-forest-line:  rgba(201, 169, 97, 0.22); /* hairline on forest            */
+
+  /* ── Rust (action) ────────────────────────────────────────────────────── */
+  --a2-rust:         #AB3D24;   /* button fill   5.74:1 vs cream; white 6.13:1   */
+  --a2-rust-hover:   #96331D;
+  --a2-rust-active:  #822B18;
+  --a2-rust-text:    #B23A26;   /* adapted: small labels 5.58:1 (mock was 2.95)  */
+  --a2-rust-wash:    #FBEFEC;   /* solid: rust-text on this = 5.29:1 */
+  --a2-rust-wash-deep: #F7E3DD;
+
+  /* ── Gold (ornament only) ─────────────────────────────────────────────── */
+  --a2-gold:         #C9A961;   /* icons/rules on forest. 7.29:1  AAA           */
+  --a2-gold-deep:    #A9853F;   /* icons on cream — decorative, never text      */
+  --a2-peach:        #E9A184;   /* soft accent, large text / illustration only  */
+
+  /* ── Type ─────────────────────────────────────────────────────────────── */
+  /* next/font injects hashed family names into --font-a2-* on <html>.
+     We chain to it first, then to the literal names (which apply when this file
+     is used outside Next, e.g. a static prototype or an email template). */
+  --a2-font-display: var(--font-a2-display, "Newsreader"), "Source Serif 4", Georgia, serif;
+  --a2-font-sans:    var(--font-a2-sans, "Inter"), var(--font-a2-odia, "Noto Sans Oriya"), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --a2-font-script:  var(--font-a2-script, "Parisienne"), "Alex Brush", cursive;
+
+  --a2-text-hero:    clamp(3rem, 6.2vw, 5.5rem);    /* ~88px @1440  */
+  --a2-text-h2:      clamp(2.25rem, 4.2vw, 3.625rem); /* ~58px      */
+  --a2-text-h2-sm:   clamp(1.9rem, 3.4vw, 3rem);     /* impact band */
+  --a2-text-h3:      clamp(1.35rem, 2vw, 1.5rem);    /* card titles */
+  --a2-text-lead:    clamp(1rem, 1.15vw, 1.125rem);
+  --a2-text-body:    1rem;
+  --a2-text-sm:      0.875rem;
+  --a2-text-eyebrow: 0.75rem;
+  --a2-text-stat:    clamp(2.25rem, 3.6vw, 3.125rem);
+
+  --a2-track-tight:  -0.02em;
+  --a2-track-eyebrow: 0.18em;
+
+  /* ── Geometry ─────────────────────────────────────────────────────────── */
+  --a2-container:    1280px;
+  --a2-gutter:       clamp(1.25rem, 5vw, 5rem);  /* 46/809 ≈ 5.7% */
+  --a2-r-btn:        3px;
+  --a2-r-card:       4px;
+  --a2-r-photo:      3px;
+  --a2-r-pill:       999px;
+
+  /* ── Ornament (Phase 2) ──────────────────────────────────────────────────
+     Sampled from the mockup's pen-and-ink details:
+       illustration ink  #8A6A52  (temple/palms/boat, 4.61:1 on cream)
+       foliage lines     #C8B090  (margin botanicals, 1.95:1 — decorative only)
+       stamp ink         #B49B80  (faded rubber-stamp impression)
+     These are DECORATION. WCAG 1.4.11 applies to meaningful graphics, and none
+     of these carry meaning that is not also in adjacent text, so they are
+     allowed below 3:1 — but an ornament that *does* carry a label must use
+     --a2-ochre (4.61:1), which is why the token exists.                      */
+  --a2-ochre:        #8A6A52;
+  --a2-ochre-soft:   #B49B80;
+  --a2-foliage:      #C8B090;
+  --a2-foliage-deep: #A8895F;
+
+  /* Torn-paper edge: height + fibre shadow. Height is responsive because a
+     6px tear at 360px reads as a printing error, not a paper edge.            */
+  --a2-tear-h:       clamp(18px, 3.2vw, 34px);
+  --a2-tear-shadow:  rgba(28, 28, 26, 0.16);
+
+  --a2-hair:         rgba(28, 28, 26, 0.10);   /* default border colour, all elements */
+  --a2-border-hair:  1px solid var(--a2-hair);
+  --a2-border-sand:  1px solid var(--a2-sand);
+
+  /* Hero photo stand-in (Phase 2). Phase 4 replaces this with real imagery;
+     until then the band is a forest field with a warm subject glow so ornament
+     contrast (script, tear, stamp) is judged against plausible luminance.
+     Cream on the lightest stop = 11.73:1, cream/85 ≈ 9.51:1.                 */
+  --a2-hero-field:  radial-gradient(120% 90% at 78% 18%, #24382C 0%, #16281F 42%, #11231B 100%);
+  --a2-hero-glow:   radial-gradient(60% 70% at 62% 45%, rgba(233, 161, 132, 0.20) 0%, rgba(233, 161, 132, 0.06) 45%, transparent 72%);
+
+  --a2-shadow-card:  0 1px 2px rgba(28, 28, 26, 0.05);
+  /* Script accent over photography: a soft dark halo so cream letterforms
+     survive a bright patch of image. Not a drop shadow — a legibility scrim. */
+  --a2-shadow-script: 0 1px 6px rgba(14, 35, 29, 0.45);
+  --a2-shadow-menu:  0 18px 44px -18px rgba(14, 35, 29, 0.45);
+
+  /* ── Section rhythm (mock px × 1.78) ─────────────────────────────────── */
+  --a2-pad-section:  clamp(3.5rem, 6vw, 6rem);   /* 64–96px  */
+  --a2-pad-section-tight: clamp(2.5rem, 4vw, 4rem);
+
+  /* ── Motion ───────────────────────────────────────────────────────────── */
+  --a2-ease:         cubic-bezier(0.22, 1, 0.36, 1);
+  --a2-dur-fast:     180ms;
+  --a2-dur-base:     320ms;
+  --a2-dur-reveal:   600ms;
+}
+
+/* ── Primitives ──────────────────────────────────────────────────────────── */
+
+.a2-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--a2-font-sans);
+  font-size: var(--a2-text-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--a2-track-eyebrow);
+  text-transform: uppercase;
+  color: var(--a2-rust-text);
+}
+/* the 01|— rule group that precedes every eyebrow */
+.a2-eyebrow__num {
+  font-variant-numeric: tabular-nums;
+  color: var(--a2-rust-text);   /* no opacity: 90% alpha drops it below AA at 12px */
+}
+.a2-eyebrow__rule {
+  display: inline-block;
+  width: 1px;
+  height: 1.5em;
+  background: currentColor;
+  opacity: 0.35;
+}
+.a2-eyebrow__line {
+  display: inline-block;
+  width: 3.25rem;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.4;
+}
+
+.a2-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  min-height: 48px;
+  padding: 0 1.5rem;
+  border-radius: var(--a2-r-btn);
+  font-family: var(--a2-font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: background-color var(--a2-dur-fast) var(--a2-ease),
+              color var(--a2-dur-fast) var(--a2-ease),
+              border-color var(--a2-dur-fast) var(--a2-ease);
+}
+.a2-btn--rust {
+  background: var(--a2-rust);
+  color: #fff;
+}
+.a2-btn--rust:hover { background: var(--a2-rust-hover); }
+.a2-btn--rust:active { background: var(--a2-rust-active); }
+
+.a2-btn--outline-light {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(2px);
+}
+.a2-btn--outline-light:hover { background: rgba(255, 255, 255, 0.12); }
+
+.a2-card {
+  background: var(--a2-cream-deep);
+  border: var(--a2-border-hair);
+  border-radius: var(--a2-r-card);
+  box-shadow: var(--a2-shadow-card);
+}
+
+.a2-heading {
+  font-family: var(--a2-font-display);
+  font-weight: 400;
+  letter-spacing: var(--a2-track-tight);
+  color: var(--a2-ink);
+  line-height: 1.05;
+}
+.a2-heading em {
+  font-style: italic;
+  color: var(--a2-rust-text);
+  font-weight: 400;
+}
+
+/* Encircled arrow chip used on every card */
+.a2-chip {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--a2-r-pill);
+  border: 1px solid rgba(28, 28, 26, 0.35);
+  color: var(--a2-ink);
+  transition: background-color var(--a2-dur-base) var(--a2-ease),
+              border-color var(--a2-dur-base) var(--a2-ease),
+              color var(--a2-dur-base) var(--a2-ease);
+}
+.group:hover .a2-chip,
+.a2-card:hover .a2-chip {
+  background: var(--a2-rust);
+  border-color: var(--a2-rust);
+  color: #fff;
+}
+
+/* Ornament: section leaf art sits behind content, never interactive */
+.a2-ornament {
+  position: absolute;
+  pointer-events: none;
+  color: var(--a2-sand);
+  opacity: 0.55;
+  z-index: 0;
+}
+
+/* Focus ring — one rule, everywhere */
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--a2-rust);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+.a2-btn:focus-visible { outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
